@@ -5,29 +5,17 @@ import java.util.List;
 
 public class LeetCodeProblems {
 
-  public static void main(String[] args) {
-    LeetCodeProblems a = new LeetCodeProblems();
-    System.out.println(a.numJewelsInStones("ha", "hahaomg"));
-  }
-
-  public int numJewelsInStones(String J, String S) {
-    List holderList = new ArrayList<>();
-    char[] stringJInArrayForm = J.toCharArray();
-    for (int i = 0; i < J.length(); i++) {
-      holderList.add(stringJInArrayForm[i]);
+  public static String getMiddle(String word) {
+    if (word.length() < 2) {
+      return word;
+    } else if (word.length() % 2 == 0) {
+      return word.substring((word.length() / 2) - 1, (word.length() / 2) + 1 );
+    } else if (word.length() % 2 == 1) {
+      return word.substring(word.length() / 2, (word.length() / 2) + 1);
+    } else {
+      return word;
     }
-    int counter = 0;
-    System.out.println(holderList);
-    char[] stringSInArrayForm = S.toCharArray();
-    for (int i = 0; i < S.length(); i++) {
-      for (int j = 0; j < J.length(); j++) {
-        if (stringSInArrayForm[i] == stringJInArrayForm[j]) {
-          counter++;
-        }
-      }
-    }
-    System.out.println(counter);
-    return 1;
   }
-
 }
+
+
