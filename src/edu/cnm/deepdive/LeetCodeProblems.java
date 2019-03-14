@@ -1,30 +1,24 @@
 package edu.cnm.deepdive;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class LeetCodeProblems {
 
-  public static int maxSpan(int[] nums) {
-
-    Arrays.sort(nums);
-
-    int [] removedFirstAndLastNums =
-        Arrays.copyOfRange(nums, 1, nums.length - 1);
-    int total = 0;
-    for (int i = 0; i < removedFirstAndLastNums.length - 1; i++) {
-      total += removedFirstAndLastNums[i];
-
+  public static int sum67(int[] nums) {
+    if (nums.length == 0) {
+      return 0;
     }
-    int average = 0;
 
-    average = total / removedFirstAndLastNums.length;
+    int total = 0;
 
-    return average;
-
-
-
+    for (int i = 0; i < nums.length; i++) {
+      if (nums[i] == 6) {
+        while (nums[i] != 7) {
+          i++;
+        }
+        continue;
+      }
+      total += nums[i];
+    }
+    return total;
   }
 }
 

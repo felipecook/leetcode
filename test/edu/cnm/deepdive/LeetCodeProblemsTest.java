@@ -11,11 +11,11 @@ class LeetCodeProblemsTest {
   @Test
   void maxSpan() {
 
-    int[] test = {1, 2, 3, 4, 100};
-    int[] test1 = {1, 1, 5, 5, 10, 8, 7};
+    int[] test = {1, 2, 2, 6, 99, 99, 7};
+    int[] test1 = {1, 1, 6, 7, 2};
 
-    assertEquals(3, LeetCodeProblems.maxSpan(test));
-    assertEquals(5, LeetCodeProblems.maxSpan(test1));
+    assertEquals(5, LeetCodeProblems.sum67(test));
+    assertEquals(4, LeetCodeProblems.sum67(test1));
   }
 
 
