@@ -2,24 +2,31 @@ package edu.cnm.deepdive;
 
 public class LeetCodeProblems {
 
-  public static int sum67(int[] nums) {
-    if (nums.length == 0) {
-      return 0;
-    }
+    public static boolean isPalindrome (int number) {
+      int reverse = 0;
+      int numberToBeReversed = number;
 
-    int total = 0;
-
-    for (int i = 0; i < nums.length; i++) {
-      if (nums[i] == 6) {
-        while (nums[i] != 7) {
-          i++;
-        }
-        continue;
+      while (numberToBeReversed != 0) {
+        int lastDigit = number % 10;
+        reverse = (reverse * 10) + lastDigit;
+        numberToBeReversed /= 10;
       }
-      total += nums[i];
+
+
+      if (number == reverse) {
+        return true;
+      } else  {
+        return false;
+      }
     }
-    return total;
+
+  public static void main(String[] args) {
+    isPalindrome(-222);
+
   }
+
 }
+
+
 
 
