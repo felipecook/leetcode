@@ -2,23 +2,15 @@ package edu.cnm.deepdive;
 
 public class LeetCodeProblems {
 
-    public static int[] fizzArray(int n) {
+    public boolean only14(int[] nums) {
 
-        int[] holderArray = new int[n];
-
-        for (int i = 0; i < n; i++) {
-            holderArray[i] += i;
-
+        for (int num : nums) {
+            if (num != 1 && num != 4) {
+                return false;
+            }
         }
+        return true;
 
-        return holderArray;
-
-
-
-    }
-
-    public static void main(String[] args) {
-        System.out.println(fizzArray(10).toString());
 
 
     }
