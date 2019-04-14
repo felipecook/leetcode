@@ -2,16 +2,43 @@ package edu.cnm.deepdive;
 
 public class LeetCodeProblems {
 
-    public String[] fizzArray2(int n) {
+  public static boolean no14(int[] nums) {
 
-        String[] stringReturnArray = new String[n];
 
-        for (int i = 0; i < n; i++) {
-            stringReturnArray[i] = Integer.toString(i);
+    for (int num : nums) {
+      if (num == 1) {
+        for (int num1 : nums) {
+          if (num1 != 4) {
+            return true;
+          } else {
+            return false;
+          }
         }
-
-        return stringReturnArray;
+      }
     }
+
+    for (int num : nums) {
+      if (num == 4) {
+        for (int num1 : nums) {
+          if (num1 != 1) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+      }
+    }
+
+    return true;
+
+
+  }
+
+  public static void main(String[] args) {
+    int[] nums = new int[]{1, 2, 3, 4};
+    no14(nums);
+  }
+
 
 }
 
