@@ -2,17 +2,15 @@ package edu.cnm.deepdive;
 
 public class LeetCodeProblems {
 
-    public boolean only14(int[] nums) {
+    public String[] fizzArray2(int n) {
 
-        for (int num : nums) {
-            if (num != 1 && num != 4) {
-                return false;
-            }
+        String[] stringReturnArray = new String[n];
+
+        for (int i = 0; i < n; i++) {
+            stringReturnArray[i] = Integer.toString(i);
         }
-        return true;
 
-
-
+        return stringReturnArray;
     }
 
 }
