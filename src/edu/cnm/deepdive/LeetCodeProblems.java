@@ -2,41 +2,31 @@ package edu.cnm.deepdive;
 
 public class LeetCodeProblems {
 
-  public static boolean no14(int[] nums) {
+  public boolean either24(int[] nums) {
 
+    boolean switcher = true;
+    boolean switcher1 = true;
 
-    for (int num : nums) {
-      if (num == 1) {
-        for (int num1 : nums) {
-          if (num1 != 4) {
-            return true;
-          } else {
-            return false;
-          }
-        }
+    for (int i = 1; i < nums.length; i++) {
+
+      if ((nums[i] == 2) && (nums[i - 1] == 2)) {
+        switcher = true;
+      } else {
+        switcher = false;
+      }
+
+      if ((nums[i] == 4) && (nums[i - 1]== 4)) {
+        switcher1 = true;
+      } else {
+        switcher1 = false;
       }
     }
-
-    for (int num : nums) {
-      if (num == 4) {
-        for (int num1 : nums) {
-          if (num1 != 1) {
-            return true;
-          } else {
-            return false;
-          }
-        }
-      }
-    }
-
-    return true;
-
 
   }
 
+
   public static void main(String[] args) {
-    int[] nums = new int[]{1, 2, 3, 4};
-    no14(nums);
+
   }
 
 
