@@ -17,9 +17,10 @@ public class Array2Has12 {
       }
       if (nums[i] == 2) {
         marker2 = true;
-        val2 = 1;
+        val2 = i;
       }
     }
+
     return ((val1 < val2) && (marker1 && marker2));
 
   }
