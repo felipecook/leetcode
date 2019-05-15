@@ -9,6 +9,9 @@ public class Array2Has77 {
       if ((val == 7) && (val == nums[i + 1] || (val == nums[i + 2]))) {
         return true;
       }
+      if (nums[i + 1] == 7 && nums[i + 2] == 7) {
+        return true;
+      }
     }
     return false;
 
