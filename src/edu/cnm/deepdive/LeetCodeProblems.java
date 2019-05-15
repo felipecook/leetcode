@@ -21,6 +21,7 @@ public class LeetCodeProblems {
         switcher1 = false;
       }
     }
+    return true;
 
   }
 
