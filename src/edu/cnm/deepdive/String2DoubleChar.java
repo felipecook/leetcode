@@ -6,10 +6,9 @@ public class String2DoubleChar {
 
     String returnString = "";
 
-    for (char c: str.toCharArray()) {
-      returnString += c + c;
+    for (int i = 0; i < str.length(); i++) {
+      returnString += str.charAt(i) + str.charAt(i);
     }
-
     return returnString;
 
   }
