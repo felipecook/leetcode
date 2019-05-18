@@ -8,9 +8,9 @@ public class String2CountCode {
     String subCopy1 = "";
     String subCopy2 = "";
 
-    for (int i = 0; i < str. length() - 4; i++) {
+    for (int i = 0; i < str. length() - 3; i++) {
       subCopy1 = str.substring(i, i + 2);
-      subCopy2 = str.substring(i + 3, i + 3);
+      subCopy2 = str.substring(i + 3, i + 4);
 
       if (subCopy1.equals("co") && (subCopy2.equals("e"))) {
         counter++;
