@@ -7,9 +7,10 @@ public class String3CountYZ {
     int counter = 0;
 
     // Split the sentence string into multiple words.
-    String[] strArr = str.split(" ");
+    String[] strArr = str.split("\\W+");
 
-    for (String testWord : strArr) {
+    for (int i = 0; i < strArr.length; i++) {
+      String testWord = strArr[i].toLowerCase();
       // This grabs each word in the string array
       // This checks to make sure the word has more than one letter in it.
       if (testWord.length() > 1) {
