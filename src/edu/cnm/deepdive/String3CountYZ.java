@@ -2,7 +2,7 @@ package edu.cnm.deepdive;
 
 public class String3CountYZ {
 
-  public static int countYZ(String str) {
+  public int countYZ(String str) {
     // Counter to return number of instances Y and Z appear at the end of the word.
     int counter = 0;
 
@@ -21,6 +21,7 @@ public class String3CountYZ {
       }
     }
 
+    // return the number of times that has been seen.
     return counter;
 
 
