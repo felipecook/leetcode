@@ -9,18 +9,19 @@ public class String3CountYZ {
     // Split the sentence string into multiple words.
     String[] strArr = str.split(" ");
 
-    for (int i = 0; i < strArr.length; i++) {
+    for (String testWord : strArr) {
       // This grabs each word in the string array
-      String testWord = strArr[i];
-      for (int j = 0; j < testWord.length(); j++) {
-        char testCharacter = testWord.charAt(j);
-        if (testCharacter == 'y' || testCharacter == 'z') {
+      // This checks to make sure the word has more than one letter in it.
+      if (testWord.length() > 1) {
+        // This tests to see if last letter is a y or a z.
+        if (testWord.charAt(testWord.length() - 1) == 'y'
+            || testWord.charAt(testWord.length() - 1) == 'z') {
           counter++;
         }
       }
     }
 
-
+    return counter;
 
 
 
