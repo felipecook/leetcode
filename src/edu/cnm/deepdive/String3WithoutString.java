@@ -17,8 +17,11 @@ public class String3WithoutString {
     
 //    return base.replaceAll(remove, "");
 
+    // Create StringBuilder in order to modify the base String
     StringBuilder baseBuilderString = new StringBuilder(base);
-    
+
+    String removeInUpperCase = remove.toUpperCase();
+    String removeInLowerCase = remove.toLowerCase();
 
     if (remove.length() > base.length()) {
       return null;
@@ -28,11 +31,23 @@ public class String3WithoutString {
     for (int i = 0; i < base.length() - remove.length(); i++) {
       String testString = base.substring(i, remove.length());
 
-      // if that substring equals the remove string, remove that substring from the string
-      if (testString.equals(remove)) {
 
+
+      // if that substring equals the remove string, remove that substring from the string
+      if (testString.equals(removeInLowerCase)) {
+        baseBuilderString.delete(i, remove.length());
       }
+
+      if (testString.equals(removeInUpperCase)) {
+        baseBuilderString.delete(i, remove.length());
+      }
+
+
+
     }
+
+    return baseBuilderString.toString();
+
 
   }
 
