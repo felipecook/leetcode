@@ -28,26 +28,21 @@ public class String3WithoutString {
     }
     // Create a substring of the length of remove from base and iterate up through base with that substring.
 
-    for (int i = 0; i < base.length() - remove.length(); i++) {
-      String testString = base.substring(i, remove.length());
-
-
+    for (int i = 0; i < baseBuilderString.length() - remove.length(); i++) {
+      String testString = baseBuilderString.substring(i, i + remove.length());
 
       // if that substring equals the remove string, remove that substring from the string
       if (testString.equals(removeInLowerCase)) {
-        baseBuilderString.delete(i, remove.length());
+        baseBuilderString.delete(i, i + remove.length());
       }
 
       if (testString.equals(removeInUpperCase)) {
-        baseBuilderString.delete(i, remove.length());
+        baseBuilderString.delete(i, i + remove.length());
       }
-
-
 
     }
 
     return baseBuilderString.toString();
-
 
   }
 
