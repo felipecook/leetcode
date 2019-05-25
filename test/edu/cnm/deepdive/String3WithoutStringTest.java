@@ -10,19 +10,21 @@ class String3WithoutStringTest {
 
   String testString1 = "This is a FISH";
   String testString2 = "xyzzy";
-  String testString3 = "co deABz Cco de y";
+  String testString3 = "abxxxxab";
+
 
   String removeString1 = "IS";
   String removeString2 = "Y";
+  String removeString3 = "xx";
 
-  String resultString1 = "Th a FH";
+  String resultString1 = "Th  a FH";
   String resultString2 = "xzz";
+  String resultString3 = "abab";
 
 
   @Test
   void withoutString() {
-    assertEquals(resultString1, string3WithoutString.withoutString(testString1, removeString1));
-    assertEquals(resultString2, string3WithoutString.withoutString(testString2, removeString2));
-
+    assertEquals(resultString3, string3WithoutString.withoutString(testString3, removeString3));
   }
+
 }
