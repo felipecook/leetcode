@@ -14,25 +14,25 @@ public class String3WithoutString {
 
 
   public String withoutString(String base, String remove) {
+    
+//    return base.replaceAll(remove, "");
 
-    return base.replaceAll(remove, "");
+    StringBuilder baseBuilderString = new StringBuilder(base);
+    
 
+    if (remove.length() > base.length()) {
+      return null;
+    }
+    // Create a substring of the length of remove from base and iterate up through base with that substring.
 
+    for (int i = 0; i < base.length() - remove.length(); i++) {
+      String testString = base.substring(i, remove.length());
 
+      // if that substring equals the remove string, remove that substring from the string
+      if (testString.equals(remove)) {
 
-//    if (remove.length() > base.length()) {
-//      return null;
-//    }
-//    // Create a substring of the length of remove from base and iterate up through base with that substring.
-//
-//    for (int i = 0; i < base.length() - remove.length(); i++) {
-//      String testString = base.substring(i, remove.length());
-//
-//      // if that substring equals the remove string, remove that substring from the string
-//      if (testString.equals(remove)) {
-//
-//      }
-//    }
+      }
+    }
 
   }
 
