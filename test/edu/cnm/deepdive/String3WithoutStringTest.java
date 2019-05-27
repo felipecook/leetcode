@@ -11,20 +11,23 @@ class String3WithoutStringTest {
   String testString1 = "This is a FISH";
   String testString2 = "xyzzy";
   String testString3 = "abxxxxab";
+  String testString4 = "AA22bb";
 
 
   String removeString1 = "IS";
   String removeString2 = "Y";
   String removeString3 = "xx";
+  String removeString4 = "2";
 
   String resultString1 = "Th  a FH";
   String resultString2 = "xzz";
   String resultString3 = "abab";
+  String resultString4 = "AAbb";
 
 
   @Test
   void withoutString() {
-    assertEquals(resultString3, string3WithoutString.withoutString(testString3, removeString3));
+    assertEquals(resultString4, string3WithoutString.withoutString(testString4, removeString4));
   }
 
 }
