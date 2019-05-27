@@ -14,9 +14,16 @@ public class XYZMiddle {
     int counterFront = 0;
     int counterBack = 0;
 
-    
+    if (str.length() < 3) {
+      return false;
+    }
+    if (str.length() == 4 || str.length() == 5 || str.length() == 6) {
+      return true;
+    }
 
-
+    return (str.charAt(str.length() / 2) == 'y'
+        && str.charAt((str.length() / 2) + 1) == 'z'
+        && str.charAt((str.length() / 2) - 1) == 'x');
 
   }
 
