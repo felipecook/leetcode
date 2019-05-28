@@ -30,7 +30,7 @@ public class String3WithoutString {
       // if that substring equals the remove string, remove that substring from the string
       if (testString.equals(remove)) {
         baseBuilderString.delete(i, i + remove.length());
-        i = ;
+        i = 0;
       }
       if (testString.equals(removeInLowerCase)) {
         baseBuilderString.delete(i, i + remove.length());

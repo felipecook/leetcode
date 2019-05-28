@@ -12,47 +12,36 @@ public class MixString {
 
   public String mixString(String a, String b) {
 
-    if (a.length() < 1) {
-      return b;
-    }
-    if (b.length() < 1) {
-      return a;
-    }
+    // Create Counters
+    int i = 0, j = 0;
 
-    boolean flag = true;
+    // Create return stringBuilder
+    StringBuilder stringBuilder = new StringBuilder();
 
-    char[] charsA = a.toCharArray();
-    char[] charsB = b.toCharArray();
-
-    int lengthA = a.length();
-    int lengthB = b.length();
-
-    int counter = 0;
-
-    boolean aIsLongerThanB = false;
-    boolean bIsLongerThanA = false;
-    boolean bAndAAreEqual = false;
-
-    if (lengthA > lengthB) {
-      aIsLongerThanB = true;
-    }
-    if (lengthB > lengthA) {
-      bIsLongerThanA = true;
-    }
-    if (lengthB == lengthA) {
-      bAndAAreEqual = true;
-    }
-
-
-    StringBuilder returnStringBuilder = new StringBuilder();
-
-    while (flag) {
-      returnStringBuilder.append(charsA[counter]);
-      returnStringBuilder.append(charsB[counter]);
-
-      counter++;
+    // Use while loop to iterate up through strings taking the first characters from each and appending it to StringBuilder
+    while (i < a.length() && j < b.length()) {
+      stringBuilder.append(a.charAt(i));
+      stringBuilder.append(b.charAt(i));
+      i++;
+      j++;
 
     }
+
+
+    // if i is less than the length of a, the rest of the string of a starting from the index of i needs to be added to the substring.
+    if (i < a.length()) {
+      stringBuilder.append(a.substring(i));
+    }
+
+    // if j is less than the length of b, the rest of the string of b starting from the index of i needs to be added to the substring.
+    if (j < b.length()) {
+      stringBuilder.append(b.substring(j));
+    }
+
+    return stringBuilder.toString();
+
+
+
   }
 
 
