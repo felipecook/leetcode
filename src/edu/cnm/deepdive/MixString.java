@@ -24,7 +24,6 @@ public class MixString {
       stringBuilder.append(b.charAt(i));
       i++;
       j++;
-
     }
 
 
@@ -39,8 +38,6 @@ public class MixString {
     }
 
     return stringBuilder.toString();
-
-
 
   }
 
