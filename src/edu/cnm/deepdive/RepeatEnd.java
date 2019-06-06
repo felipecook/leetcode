@@ -11,11 +11,11 @@ public class RepeatEnd {
 
     int i = 0;
 
-    StringBuilder subStr = new StringBuilder(str.substring(n));
-    
+    StringBuilder subStr = new StringBuilder(str.substring(str.length() - n));
+
     do {
 
-      subStr.append(str.substring(n));
+      subStr.append(str.substring(str.length() - n));
       i++;
     } while (i < n);
 
