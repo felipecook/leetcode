@@ -6,17 +6,17 @@ import org.junit.jupiter.api.Test;
 
 class EqualIsNotTest {
 
-  EqualIsNot equalIsNot = new EqualIsNot();
+  private EqualIsNot equalIsNot = new EqualIsNot();
 
-  String testString1 = "noisxxnotyynotxsi";
-  String testString2 = "ABCZYXAB";
+  String testString1 = "This is notnot";
+  String testString2 = "sisnotno7Not";
   String testString3 = "AZBYCX";
 
 
   @Test
   void equalIsNot() {
 
-    assertEquals(false, equalIsNot.equalIsNot(testString1));
+    assertEquals(true, equalIsNot.equalIsNot(testString2));
 
 
   }

@@ -28,7 +28,7 @@ public class EqualIsNot {
     int var1 = 2;
     int var2 = 3;
 
-    for (int i = 0; i < str.length() - 2; i++) {
+    for (int i = 0; i <= str.length() - 2; i++) {
 
 
 
@@ -38,14 +38,15 @@ public class EqualIsNot {
           || testString.equals(strIS) || testString.equals(striS)) {
         varForIs++;
         var1++;
+      } else {
+        var1++;
       }
 
-      var1++;
 
 
     }
 
-    for (int i = 0; i < str.length() - 3; i++) {
+    for (int i = 0; i <= str.length() - 3; i++) {
 
 
       String testString = str.substring(i, var2);
@@ -55,9 +56,10 @@ public class EqualIsNot {
           || testString.equals(strNot) || testString.equals(strnot)) {
         varForNot++;
         var2++;
+      } else {
+        var2++;
       }
 
-      var2++;
 
     }
 
