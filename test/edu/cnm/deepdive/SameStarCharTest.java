@@ -8,12 +8,12 @@ class SameStarCharTest {
 
   SameStarChar sameStarChar = new SameStarChar();
 
-  String string1 = ""
+  String string1 = "";
 
   @Test
   void sameStarChar() {
 
-    assertEquals(false, );
+    assertFalse(sameStarChar.sameStarChar(string1));
 
 
   }
