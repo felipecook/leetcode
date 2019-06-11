@@ -13,7 +13,14 @@ public class ProblemFix34 {
 
   public int[] fix34(int[] nums) {
 
+    for (int i = 0; i < nums.length; i++) {
+      if (nums[i] == 3) {
+        int holderVar = nums[i + 1];
+        for (int j = i; j < nums.length; j++) {
 
+        }
+      }
+    }
 
   }
 
