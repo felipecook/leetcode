@@ -4,14 +4,20 @@ public class ProblemGString {
 
   public boolean gHappy(String str) {
 
-    if (str.length() <= 1) {
+    if (str.length() == 0) {
       return true;
+    }
+    if (str.length() == 1 && (str.charAt(0) != 'g' || str.charAt(0) != 'G')) {
+      return false;
     }
     if ((str.length() == 2) && (str.charAt(str.length() -1) == 'g'
         || str.charAt(str.length() - 1) == 'G')
         && (str.charAt(str.length() - 2) == 'g'
         || str.charAt(str.length() - 2)  == 'G')) {
       return true;
+    }
+    if (str.charAt(str.length() - 1) == 'g' || str.charAt(str.length() - 1) == 'G') {
+      return false;
     }
 
     boolean flag = false;
