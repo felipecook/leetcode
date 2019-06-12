@@ -22,6 +22,8 @@ public class ProblemFix34 {
       }
     }
 
+    return nums;
+
   }
 
 }
