@@ -11,8 +11,27 @@ public class TripleThreat {
 
   public int countTriple(String str) {
 
+    if (str.length() < 3) {
+      return 0;
+    }
 
-    return 0;
+
+    int counter = 0;
+
+    for (int i = 0; i < str.length() - 2; i++) {
+      char holderCharA = str.charAt(i);
+      char holderCharB = str.charAt(i + 1);
+      char holderCharC = str.charAt(i + 2);
+
+
+      if (holderCharA == holderCharB && holderCharA == holderCharC) {
+        counter++;
+      }
+
+    }
+
+    return counter;
+
   }
 
 
