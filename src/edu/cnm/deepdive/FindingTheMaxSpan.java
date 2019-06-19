@@ -20,7 +20,7 @@ public class FindingTheMaxSpan {
       int currentVar = nums[i];
 
       // This for loop starts at the end of the array and iterates back through all the rest of the elements in the array until it finds a
-      for (int j = nums.length; j > currentVar; j--) {
+      for (int j = nums.length -1; j > currentVar; j--) {
         if (nums[j] == currentVar ) {
           counter += j - i;
           break;
