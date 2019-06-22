@@ -638,6 +638,109 @@ So "xxy" is balanced, but "xyx" is not. One 'y' can balance multiple 'x's. Retur
         && str.charAt((str.length() / 2) - 1) == 'x');
 
   }
+
+  /*
+  returns true if the int array has the numerals 1 and 2 in it, and the 1 comes before the 2 in the array.
+   */
+  public boolean has12(int[] nums) {
+    boolean marker1 = false;
+    boolean marker2 = false;
+    int val1 = 0;
+    int val2 = 0;
+
+
+    for (int i = 0; i < nums.length; i++) {
+
+      if (nums[i] == 1) {
+        marker1 = true;
+        val1 = i;
+      }
+      if (nums[i] == 2) {
+        marker2 = true;
+        val2 = i;
+      }
+    }
+
+    return ((val1 < val2) && (marker1 && marker2));
+
+  }
+
+  /*
+  returns true if the int array has 77 in it, there can be a space between the 7's.
+   */
+  public boolean has77(int[] nums) {
+
+    for (int i = 0; i < nums.length - 2; i++) {
+      int val = nums[i];
+      if ((val == 7) && (val == nums[i + 1] || (val == nums[i + 2]))) {
+        return true;
+      }
+      if (nums[i + 1] == 7 && nums[i + 2] == 7) {
+        return true;
+      }
+    }
+    return false;
+
+  }
+
+  /*
+Consider the leftmost and righmost appearances
+of some value in an array. We'll say that the
+"span" is the number of elements between the two
+inclusive. A single value has a span of 1. Returns
+the largest span found in the given array.
+(Efficiency is not a priority.)
+ */
+  public int maxSpan(int[] nums) {
+    if (nums.length < 1) {
+      return 0;
+    }
+
+    if (nums.length == 1) {
+      return 1;
+    }
+
+    if (nums.length == 2 && nums[0] == nums[1]) {
+      return 2;
+    } else if (nums.length == 2) {
+      return 1;
+    } else {
+
+      if (nums.length == 3 && nums[0] == nums[1] && nums[0] == nums[2]) {
+        return 3;
+      } else if (nums.length == 3 && nums[0] == nums[2]) {
+        return 3;
+      } else if (nums.length == 3) {
+        return 2;
+      }
+
+      int counter = 1;
+      int counter2 = 1;
+
+      // This for loop iterates through each element in the array
+      for (int i = 0; i < nums.length; i++) {
+        int currentVar = nums[i];
+
+        // This for loop starts at the end of the array and iterates back through all the rest of the elements in the array until it finds a
+        for (int j = nums.length - 1; j > currentVar; j--) {
+          if (nums[j] == currentVar) {
+            counter += j - i;
+            break;
+          }
+        }
+
+        if (counter > counter2) {
+          counter2 = counter;
+        }
+        counter = 1;
+      }
+
+      return counter2;
+
+    }
+  }
+
+  
 }
 
 
