@@ -740,7 +740,17 @@ the largest span found in the given array.
     }
   }
 
-  
+  /*
+  Return S after removing the outermost parentheses of every
+  primitive string in the primitive decomposition of S. -Leetcode
+   */
+  public String removeOuterParentheses(String S) {
+
+    
+
+
+    return S;
+  }
 }
 
 
