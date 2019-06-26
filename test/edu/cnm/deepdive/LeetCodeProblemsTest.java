@@ -11,10 +11,18 @@ class LeetCodeProblemsTest {
   String testString = "(()()(()))(())";
   String resultString = "()()(())()";
 
+
+
   @Test
   void removeOuterParentheses() {
 
     assertEquals(resultString, leetCodeProblems.removeOuterParentheses(testString));
+
+  }
+
+  @Test
+  void fib() {
+    assertEquals(6, leetCodeProblems.fib(3));
 
   }
 }
