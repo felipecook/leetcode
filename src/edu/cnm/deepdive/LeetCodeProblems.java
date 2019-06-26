@@ -744,12 +744,43 @@ the largest span found in the given array.
   Return S after removing the outermost parentheses of every
   primitive string in the primitive decomposition of S. -Leetcode
    */
-  public String removeOuterParentheses(String S) {
+  public String removeOuterParenthesesA(String S) {
 
-    
+    int length = S.length();
+    int counter = 0;
+
+
+    char[] sAsArray = S.toCharArray();
+
+    for (int i = 0; i < length; i++) {
+      if (sAsArray[i] == '(') {
+
+      }
+    }
+
+
 
 
     return S;
+  }
+
+  public String removeOuterParentheses(String S) {
+    if(S == null) return "";
+    char[] chars = S.toCharArray();
+    int stack = 0;
+
+    StringBuilder builder = new StringBuilder();
+    for(int i=0; i<chars.length; i++){
+      if (chars[i] == 40) {
+        stack ++;
+        if(stack != 1) builder.append(chars[i]);
+      } else if (chars[i] == 41) {
+        stack --;
+        if(stack != 0) builder.append(chars[i]);
+      }
+    }
+
+    return builder.toString();
   }
 }
 
