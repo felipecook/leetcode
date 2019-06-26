@@ -772,9 +772,9 @@ the largest span found in the given array.
   }
 
   /*
-  produces the fibonacci sequence for a given N. Attempt to solve with recursion.
+  produces the factorial for a given N. Attempt to solve with recursion.
    */
-  public int fib(int N) {
+  public int factorial(int N) {
     if (N == 0) {
       return 0;
     }
@@ -782,7 +782,7 @@ the largest span found in the given array.
       return 1;
     }
 
-    return N + fib(N - 1);
+    return N + factorial(N - 1);
 
   }
 
