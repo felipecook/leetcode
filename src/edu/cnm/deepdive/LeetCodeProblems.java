@@ -744,44 +744,49 @@ the largest span found in the given array.
   Return S after removing the outermost parentheses of every
   primitive string in the primitive decomposition of S. -Leetcode
    */
-  public String removeOuterParenthesesA(String S) {
+  public String removeOuterParentheses(String S) {
+
+    if (S == null)
+      return "";
 
     int length = S.length();
     int counter = 0;
-
-
     char[] sAsArray = S.toCharArray();
+    StringBuilder builder = new StringBuilder();
 
     for (int i = 0; i < length; i++) {
       if (sAsArray[i] == '(') {
-
+        counter++;
+        if (counter != 1)
+          builder.append(sAsArray[i]);
       }
-    }
-
-
-
-
-    return S;
-  }
-
-  public String removeOuterParentheses(String S) {
-    if(S == null) return "";
-    char[] chars = S.toCharArray();
-    int stack = 0;
-
-    StringBuilder builder = new StringBuilder();
-    for(int i=0; i<chars.length; i++){
-      if (chars[i] == 40) {
-        stack ++;
-        if(stack != 1) builder.append(chars[i]);
-      } else if (chars[i] == 41) {
-        stack --;
-        if(stack != 0) builder.append(chars[i]);
+      if (sAsArray[i] == ')') {
+        counter--;
+        if (counter != 0) {
+          builder.append(sAsArray[i]);
+        }
       }
     }
 
     return builder.toString();
   }
+
+  /*
+  produces the fibonacci sequence for a given N. Attempt to solve with recursion.
+   */
+  public int fib(int N) {
+    if (N == 0) {
+      return 0;
+    }
+    if (N == 1) {
+      return 1;
+    }
+
+    return N + fib(N - 1);
+
+  }
+
+
 }
 
 
