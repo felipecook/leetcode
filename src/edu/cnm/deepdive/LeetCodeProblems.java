@@ -786,6 +786,17 @@ the largest span found in the given array.
 
   }
 
+  public int fib(int N) {
+
+    int counter = 0;
+
+    for (int i = 0; i < N; i++) {
+      counter += i;
+    }
+
+    return counter;
+  }
+
 
 }
 

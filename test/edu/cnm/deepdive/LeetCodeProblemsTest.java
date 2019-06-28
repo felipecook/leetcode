@@ -25,4 +25,9 @@ class LeetCodeProblemsTest {
     assertEquals(6, leetCodeProblems.factorial(3));
 
   }
+
+  @Test
+  void fib() {
+    assertEquals(1, leetCodeProblems.fib(2));
+  }
 }
