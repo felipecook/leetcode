@@ -772,29 +772,28 @@ the largest span found in the given array.
   }
 
   /*
-  produces the factorial for a given N. Attempt to solve with recursion.
+  produces the factorial for a given (n). Attempt to solve with recursion.
    */
-  public int factorial(int N) {
-    if (N == 0) {
+  public int factorial(int n) {
+    if (n == 0) {
       return 0;
     }
-    if (N == 1) {
+    if (n == 1) {
       return 1;
     }
 
-    return N + factorial(N - 1);
+    return n + factorial(n - 1);
 
   }
 
-  public int fib(int N) {
-
-    int counter = 0;
-
-    for (int i = 0; i < N; i++) {
-      counter += i;
+  public int fib(int n) {
+    if (n == 0) {
+      return 0;
     }
-
-    return counter;
+    if (n == 1) {
+      return 1;
+    }
+    return (fib(n - 1) + fib(n - 2));
   }
 
 
