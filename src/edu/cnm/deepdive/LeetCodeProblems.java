@@ -846,14 +846,23 @@ the largest span found in the given array.
   each code c is followed by a space and by a positive integer
   n (int n >= 0) which indicates the quantity of books of this code in stock.
    */
-  public String stockSummary(String[] lstOfArt, String[] lstOf1stLetter) {
-    if (lstOfArt.length == 0 || lstOf1stLetter.length == 0) {
+  public String stockSummary(String[] stockItemsToBeSearched, String[] capitalLetters) {
+    if (stockItemsToBeSearched.length == 0 || capitalLetters.length == 0) {
       return "";
     }
 
-    
+    int counter = 0;
 
+    // use double for loop to iterate through the capital letters and then through the stock items
 
+    for (int i = 0; i < capitalLetters.length; i++) {
+      String capitalLetter = capitalLetters[i];
+      for (int j = 0; j < stockItemsToBeSearched.length; j++) {
+        if (capitalLetter.equals(stockItemsToBeSearched[i].charAt(0))) {
+          
+        }
+      }
+    }
   }
 
 
