@@ -825,7 +825,9 @@ the largest span found in the given array.
     }
 
     String returnStr = stringBuilder.toString();
-    returnStr.replaceAll("*", "");
+    returnStr = returnStr.replaceAll("\\*", "");
+
+    return returnStr;
 
   }
 
