@@ -786,6 +786,9 @@ the largest span found in the given array.
 
   }
 
+  /*
+  produces the fibonacci sequence up to a given n.
+   */
   public int fib(int n) {
     if (n == 0) {
       return 0;
@@ -794,6 +797,32 @@ the largest span found in the given array.
       return 1;
     }
     return (fib(n - 1) + fib(n - 2));
+  }
+
+  /*
+  takes a string and returns a new string with all vowels removed.
+   */
+  public String disemvowel(String str) {
+    int strLength = str.length();
+    StringBuilder stringBuilder = new StringBuilder(str);
+
+    for (int i = 0; i < strLength; i++) {
+      if (stringBuilder.charAt(i) == 'a' || stringBuilder.charAt(i) == 'A') {
+        stringBuilder.delete(i, i);
+      } else if (stringBuilder.charAt(i) == 'e' || stringBuilder.charAt(i) == 'E') {
+        stringBuilder.delete(i, i);
+      } else if (stringBuilder.charAt(i) == 'i' || stringBuilder.charAt(i) == 'I') {
+        stringBuilder.delete(i, i);
+      } else if (stringBuilder.charAt(i) == 'o' || stringBuilder.charAt(i) == 'O') {
+        stringBuilder.delete(i, i);
+      } else (stringBuilder.charAt(i) == 'u' || stringBuilder.charAt(i) == 'U') {
+        stringBuilder.delete(i, i);
+      }
+
+    }
+
+    return stringBuilder.toString();
+
   }
 
 
