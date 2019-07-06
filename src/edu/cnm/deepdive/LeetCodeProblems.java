@@ -802,6 +802,11 @@ the largest span found in the given array.
   /*
   takes a string and returns a new string with all vowels removed.
    */
+  /* REGEX Solution
+  public static String disemvowel(String Z) {
+        return Z.replaceAll("(?i)[aeiou]" , "");
+    }
+   */
   public String disemvowel(String str) {
     int strLength = str.length();
     StringBuilder stringBuilder = new StringBuilder(str);
@@ -828,6 +833,26 @@ the largest span found in the given array.
     returnStr = returnStr.replaceAll("\\*", "");
 
     return returnStr;
+
+  }
+
+  /*
+  Help the bookseller! (codewars.com)
+
+  A bookseller has lots of books classified in 26 categories
+  labeled A, B, ... Z. Each book has a code c of 3, 4, 5 or more
+  capitals letters. The 1st letter of a code is the capital
+  letter of the book category. In the bookseller's stocklist
+  each code c is followed by a space and by a positive integer
+  n (int n >= 0) which indicates the quantity of books of this code in stock.
+   */
+  public String stockSummary(String[] lstOfArt, String[] lstOf1stLetter) {
+    if (lstOfArt.length == 0 || lstOf1stLetter.length == 0) {
+      return "";
+    }
+
+    
+
 
   }
 
