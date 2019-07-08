@@ -861,8 +861,8 @@ the largest span found in the given array.
 
       // iterates through each stockItem and adds up the values
       for (int j = 0; j < stockItemsToBeSearched.length; j++) {
-        if (capitalLetter == (stockItemsToBeSearched[i].charAt(0))) {
-          String numberOnly = stockItemsToBeSearched[i].replaceAll("[^0-9]", "");
+        if (capitalLetter == (stockItemsToBeSearched[j].charAt(0))) {
+          String numberOnly = stockItemsToBeSearched[j].replaceAll("[^0-9]", "");
           counter += Integer.parseInt(numberOnly);
         }
       }
