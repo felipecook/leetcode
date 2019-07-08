@@ -38,4 +38,12 @@ class LeetCodeProblemsTest {
     assertEquals("N ffns bt,\nYr wrtng s mng th wrst 'v vr rd", leetCodeProblems.disemvowel(
         "No offense but,\nYour writing is among the worst I've ever read"));
   }
+
+  @Test
+  void stockSummary() {
+    String[] art = new String[]{"ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"};
+    String[] cd = new String[] {"A", "B"};
+    assertEquals("(A : 200) - (B : 1140)",
+        leetCodeProblems.stockSummary(art, cd));
+  }
 }

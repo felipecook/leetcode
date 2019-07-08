@@ -854,25 +854,29 @@ the largest span found in the given array.
 
     StringBuilder stringBuilderAnswer = new StringBuilder();
     // use double for loop to iterate through the capital letters and then through the stock items
+    int counter = 0;
 
     for (int i = 0; i < capitalLetters.length; i++) {
-      int counter = 0;
       char capitalLetter = capitalLetters[i].charAt(0);
 
       // iterates through each stockItem and adds up the values
       for (int j = 0; j < stockItemsToBeSearched.length; j++) {
         if (capitalLetter == (stockItemsToBeSearched[i].charAt(0))) {
-          counter += Integer.parseInt(stockItemsToBeSearched[i]);
+          String numberOnly = stockItemsToBeSearched[i].replaceAll("[^0-9]", "");
+          counter += Integer.parseInt(numberOnly);
         }
       }
 
-
       if (i != capitalLetters.length - 1) {
         stringBuilderAnswer.append(String.format("(%s : %d) - ", capitalLetter, counter));
+        counter = 0;
       } else {
         stringBuilderAnswer.append(String.format("(%s : %d)", capitalLetter, counter));
+        counter = 0;
       }
+
     }
+
     return stringBuilderAnswer.toString();
 
   }
