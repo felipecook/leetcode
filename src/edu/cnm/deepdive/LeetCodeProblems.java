@@ -851,17 +851,20 @@ the largest span found in the given array.
       return "";
     }
 
-    int counter = 0;
 
     // use double for loop to iterate through the capital letters and then through the stock items
 
     for (int i = 0; i < capitalLetters.length; i++) {
-      String capitalLetter = capitalLetters[i];
+      int counter = 0;
+      char capitalLetter = capitalLetters[i].charAt(0);
+
+      // iterates through each stockItem and adds up the values
       for (int j = 0; j < stockItemsToBeSearched.length; j++) {
-        if (capitalLetter.equals(stockItemsToBeSearched[i].charAt(0))) {
-          
+        if (capitalLetter == (stockItemsToBeSearched[i].charAt(0))) {
+          counter += Integer.parseInt(stockItemsToBeSearched[i]);
         }
       }
+      System.out.printf("%s - %n");
     }
   }
 
