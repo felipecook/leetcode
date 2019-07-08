@@ -847,11 +847,12 @@ the largest span found in the given array.
   n (int n >= 0) which indicates the quantity of books of this code in stock.
    */
   public String stockSummary(String[] stockItemsToBeSearched, String[] capitalLetters) {
+
     if (stockItemsToBeSearched.length == 0 || capitalLetters.length == 0) {
       return "";
     }
 
-
+    StringBuilder stringBuilderAnswer = new StringBuilder();
     // use double for loop to iterate through the capital letters and then through the stock items
 
     for (int i = 0; i < capitalLetters.length; i++) {
@@ -864,8 +865,16 @@ the largest span found in the given array.
           counter += Integer.parseInt(stockItemsToBeSearched[i]);
         }
       }
-      System.out.printf("%s - %n");
+
+
+      if (i != capitalLetters.length - 1) {
+        stringBuilderAnswer.append(String.format("(%s : %d) - ", capitalLetter, counter));
+      } else {
+        stringBuilderAnswer.append(String.format("(%s : %d)", capitalLetter, counter));
+      }
     }
+    return stringBuilderAnswer.toString();
+
   }
 
 
