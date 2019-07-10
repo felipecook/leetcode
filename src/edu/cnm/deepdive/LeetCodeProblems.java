@@ -1,5 +1,7 @@
 package edu.cnm.deepdive;
 
+import java.util.ArrayList;
+
 public class LeetCodeProblems {
 
   public boolean either24(int[] nums) {
@@ -882,12 +884,38 @@ the largest span found in the given array.
   }
 
   /*
-  Take 2 strings s1 and s2 including only letters from ato z.
+  Take 2 strings s1 and s2 including only letters from a to z.
   Return a new sorted string, the longest possible, containing distinct letters,
   each taken only once - coming from s1 or s2.
    */
   public String longest (String s1, String s2) {
+
+    ArrayList<Character> listForReturnString = new ArrayList<>();
+
+    for (int i = 0; i < s1.length(); i++) {
+      char currentChar = s1.charAt(i);
+      if (!listForReturnString.contains(currentChar)){
+        listForReturnString.add(currentChar);
+      }
+    }
+
+    for (int i = 0; i < s2.length(); i++) {
+      char currentChar = s2.charAt(i);
+      if (!listForReturnString.contains(currentChar)){
+        listForReturnString.add(currentChar);
+      }
+    }
+
+    StringBuilder stringBuilder = new StringBuilder();
     
+    for (char c: listForReturnString) {
+      stringBuilder.append(c);
+    }
+
+    return stringBuilder.toString();
+
+
+
   }
 
 }
