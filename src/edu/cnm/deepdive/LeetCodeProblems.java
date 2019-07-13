@@ -1,6 +1,7 @@
 package edu.cnm.deepdive;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class LeetCodeProblems {
 
@@ -906,8 +907,10 @@ the largest span found in the given array.
       }
     }
 
+    Collections.sort(listForReturnString);
+
     StringBuilder stringBuilder = new StringBuilder();
-    
+
     for (char c: listForReturnString) {
       stringBuilder.append(c);
     }
@@ -917,6 +920,76 @@ the largest span found in the given array.
 
 
   }
+
+  /*
+  creates a calculator which evaluates expressions in Reverse Polish notation.
+   */
+
+  public double evaluate(String expr) {
+
+    // create a stack from which you can push operands onto.
+
+    StringBuilder exprInStringBuilder = new StringBuilder(expr);
+    ArrayList<Double> stack = new ArrayList<>();
+
+    for (int i = 0; i < expr.length(); i++ ) {
+
+      switch (exprInStringBuilder.charAt(i)) {
+        case '1':
+          stack.add(1d);
+          break;
+        case '2':
+          stack.add(2d);
+          break;
+        case '3':
+          stack.add(3d);
+          break;
+        case '4':
+          stack.add(4d);
+          break;
+        case '5':
+          stack.add(5d);
+          break;
+        case '6':
+          stack.add(6d);
+          break;
+        case '7':
+          stack.add(7d);
+          break;
+        case '8':
+          stack.add(8d);
+          break;
+        case '2':
+          stack.add(2d);
+          break;
+        case '2':
+          stack.add(2d);
+          break;
+        case '2':
+          stack.add(2d);
+          break;
+        case '2':
+          stack.add(2d);
+          break;
+        case '2':
+          stack.add(2d);
+          break;
+        case '2':
+          stack.add(2d);
+          break;
+
+
+
+
+      }
+
+    }
+
+
+
+    return 0;
+  }
+
 
 }
 

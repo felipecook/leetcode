@@ -46,4 +46,11 @@ class LeetCodeProblemsTest {
     assertEquals("(A : 200) - (B : 1140)",
         leetCodeProblems.stockSummary(art, cd));
   }
+
+  @Test
+  void longest() {
+    assertEquals("aehrsty", leetCodeProblems.longest("aretheyhere", "yestheyarehere"));
+    assertEquals("abcdefghilnoprstu", leetCodeProblems.longest("loopingisfunbutdangerous", "lessdangerousthancoding"));
+    assertEquals("acefghilmnoprstuy", leetCodeProblems.longest("inmanylanguages", "theresapairoffunctions"));
+  }
 }
