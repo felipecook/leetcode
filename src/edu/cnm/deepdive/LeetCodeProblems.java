@@ -940,29 +940,25 @@ the largest span found in the given array.
         case '+':
           counter = stack.get(stack.size() - 1) + stack.get(stack.size() - 2);
           stack.remove(stack.size() - 1);
-          stack.remove(stack.size() - 2);
-          stack.add(counter);
+          stack.set(stack.size() - 2, counter);
           counter = 0;
           break;
         case '-':
-          counter = stack.get(stack.size() - 1) - stack.get(stack.size() - 2);
+          counter = stack.get(stack.size() - 2) - stack.get(stack.size() - 1);
           stack.remove(stack.size() - 1);
-          stack.remove(stack.size() - 2);
-          stack.add(counter);
+          stack.set(stack.size() - 2, counter);
           counter = 0;
           break;
         case 'x':
           counter = stack.get(stack.size() - 1) * stack.get(stack.size() - 2);
           stack.remove(stack.size() - 1);
-          stack.remove(stack.size() - 2);
-          stack.add(counter);
+          stack.set(stack.size() - 2, counter);
           counter = 0.0;
           break;
-        case '÷':
-          counter = stack.get(stack.size() - 1) / stack.get(stack.size() - 2);
+        case '/':
+          counter = stack.get(stack.size() - 2) / stack.get(stack.size() - 1);
           stack.remove(stack.size() - 1);
-          stack.remove(stack.size() - 2);
-          stack.add(counter);
+          stack.set(stack.size() - 2, counter);
           counter = 0.0;
           break;
         default:

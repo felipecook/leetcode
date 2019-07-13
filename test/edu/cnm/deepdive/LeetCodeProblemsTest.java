@@ -53,4 +53,10 @@ class LeetCodeProblemsTest {
     assertEquals("abcdefghilnoprstu", leetCodeProblems.longest("loopingisfunbutdangerous", "lessdangerousthancoding"));
     assertEquals("acefghilmnoprstuy", leetCodeProblems.longest("inmanylanguages", "theresapairoffunctions"));
   }
+
+  @Test
+  void evaluate() {
+    assertEquals(2, leetCodeProblems.evaluate("4 2 /"));
+
+  }
 }
