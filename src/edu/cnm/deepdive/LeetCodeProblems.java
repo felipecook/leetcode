@@ -18,7 +18,7 @@ public class LeetCodeProblems {
         switcher = false;
       }
 
-      if ((nums[i] == 4) && (nums[i - 1]== 4)) {
+      if ((nums[i] == 4) && (nums[i - 1] == 4)) {
         switcher1 = true;
       } else {
         switcher1 = false;
@@ -76,8 +76,6 @@ of "not" anywhere in the string (case sensitive).
 
     for (int i = 0; i <= str.length() - 2; i++) {
 
-
-
       String testString = str.substring(i, var1);
 
       if (testString.equals(strIs) || testString.equals(stris)
@@ -89,11 +87,9 @@ of "not" anywhere in the string (case sensitive).
       }
 
 
-
     }
 
     for (int i = 0; i <= str.length() - 3; i++) {
-
 
       String testString = str.substring(i, var2);
 
@@ -135,7 +131,6 @@ Any leftover chars go at the end of the result.
       j++;
     }
 
-
     // if i is less than the length of a, the rest of the string of a starting from the index of i needs to be added to the substring.
     if (i < a.length()) {
       stringBuilder.append(a.substring(i));
@@ -158,7 +153,6 @@ Any leftover chars go at the end of the result.
     for (int i = 0; i < (nums.length - 2); i++) {
       int val = nums[i];
 
-
       if ((val == nums[i + 1]) && (val == nums[i + 2])) {
         return false;
       }
@@ -179,7 +173,6 @@ yields "bcaefd". Ignore any group of fewer than 3 chars at the end.
   public String oneTwo(String str) {
     int counter = 1;
 
-
     if (str.length() < 1) {
       return str;
     }
@@ -192,9 +185,7 @@ yields "bcaefd". Ignore any group of fewer than 3 chars at the end.
       stringBuilder.delete(str.length() - modCounter, str.length());
     }
 
-
     String appendedString = stringBuilder.toString();
-
 
     char[] chars = appendedString.toCharArray();
 
@@ -205,11 +196,7 @@ yields "bcaefd". Ignore any group of fewer than 3 chars at the end.
 //      charsLinkedList.add(c);
 //    }
 
-
-
-
-
-    for (int i = 0; i < str.length(); i++){
+    for (int i = 0; i < str.length(); i++) {
       char varHolder = ' ';
       char varHolder1 = ' ';
       if (counter == 3) {
@@ -223,7 +210,6 @@ yields "bcaefd". Ignore any group of fewer than 3 chars at the end.
         counter++;
       }
     }
-
 
     return String.valueOf(chars);
 
@@ -291,27 +277,27 @@ in the array before any 4.
     if (str.length() == 1 && (str.charAt(0) != 'g' || str.charAt(0) != 'G')) {
       return false;
     }
-    if ((str.length() == 2) && (str.charAt(str.length() -1) == 'g'
+    if ((str.length() == 2) && (str.charAt(str.length() - 1) == 'g'
         || str.charAt(str.length() - 1) == 'G')
         && (str.charAt(str.length() - 2) == 'g'
-        || str.charAt(str.length() - 2)  == 'G')) {
+        || str.charAt(str.length() - 2) == 'G')) {
       return true;
     }
-
 
     boolean flag = false;
 
     char[] chars = str.toCharArray();
 
     for (int i = 0; i < str.length() - 1; i++) {
-      if (chars[i] == 'g' || chars[i] =='G') {
+      if (chars[i] == 'g' || chars[i] == 'G') {
 //        if (i == 0) {
 //          if (chars[i + 1] == 'g' || chars[i + 1] == 'G') {
 //            flag = true;
 //          }
 //        }
 
-        if ((chars[i + 1] == 'g' || chars[i + 1] == 'G') || (chars[i - 1] == 'g' || chars[i - 1] == 'G')) {
+        if ((chars[i + 1] == 'g' || chars[i + 1] == 'G') || (chars[i - 1] == 'g'
+            || chars[i - 1] == 'G')) {
           flag = true;
         } else {
           flag = false;
@@ -363,14 +349,11 @@ they are the same.
 
     boolean flag = true;
 
-
-
     char[] chars = str.toCharArray();
 
     if (chars[str.length() - 1] == '*') {
       return false;
     }
-
 
     for (int i = 0; i < str.length() - 2; i++) {
       char middleChar = chars[i + 1];
@@ -399,7 +382,6 @@ they are the same.
 
     String subCopy = "";
 
-
     for (int i = 0; i < str.length() - 2; i++) {
       subCopy = str.substring(i, i + 3);
 
@@ -426,7 +408,7 @@ they are the same.
     String subCopy1 = "";
     String subCopy2 = "";
 
-    for (int i = 0; i < str. length() - 3; i++) {
+    for (int i = 0; i < str.length() - 3; i++) {
       subCopy1 = str.substring(i, i + 2);
       subCopy2 = str.substring(i + 3, i + 4);
 
@@ -443,12 +425,11 @@ they are the same.
   /*
   counts the number of times that hi appears in the string.
    */
-  public int countHi(String str){
+  public int countHi(String str) {
 
     int counter = 0;
 
     String subCopy = "";
-
 
     for (int i = 0; i < str.length() - 1; i++) {
       subCopy = str.substring(i, i + 2);
@@ -457,7 +438,6 @@ they are the same.
         counter++;
       }
     }
-
 
     return counter;
   }
@@ -496,7 +476,6 @@ they are the same.
 
     // return the number of times that has been seen.
     return counter;
-
 
 
   }
@@ -569,14 +548,12 @@ of triples in the given string. The triples may overlap.
       return 0;
     }
 
-
     int counter = 0;
 
     for (int i = 0; i < str.length() - 2; i++) {
       char holderCharA = str.charAt(i);
       char holderCharB = str.charAt(i + 1);
       char holderCharC = str.charAt(i + 2);
-
 
       if (holderCharA == holderCharB && holderCharA == holderCharC) {
         counter++;
@@ -604,7 +581,6 @@ So "xxy" is balanced, but "xyx" is not. One 'y' can balance multiple 'x's. Retur
     if (chars.length < 1) {
       return true;
     }
-
 
     for (char aChar : chars) {
 
@@ -650,7 +626,6 @@ So "xxy" is balanced, but "xyx" is not. One 'y' can balance multiple 'x's. Retur
     boolean marker2 = false;
     int val1 = 0;
     int val2 = 0;
-
 
     for (int i = 0; i < nums.length; i++) {
 
@@ -749,8 +724,9 @@ the largest span found in the given array.
    */
   public String removeOuterParentheses(String S) {
 
-    if (S == null)
+    if (S == null) {
       return "";
+    }
 
     int length = S.length();
     int counter = 0;
@@ -760,8 +736,9 @@ the largest span found in the given array.
     for (int i = 0; i < length; i++) {
       if (sAsArray[i] == '(') {
         counter++;
-        if (counter != 1)
+        if (counter != 1) {
           builder.append(sAsArray[i]);
+        }
       }
       if (sAsArray[i] == ')') {
         counter--;
@@ -815,8 +792,6 @@ the largest span found in the given array.
     StringBuilder stringBuilder = new StringBuilder(str);
 
     for (int i = 0; i < stringBuilder.length(); i++) {
-
-
 
       if (stringBuilder.charAt(i) == 'a' || stringBuilder.charAt(i) == 'A') {
         stringBuilder.setCharAt(i, '*');
@@ -889,20 +864,20 @@ the largest span found in the given array.
   Return a new sorted string, the longest possible, containing distinct letters,
   each taken only once - coming from s1 or s2.
    */
-  public String longest (String s1, String s2) {
+  public String longest(String s1, String s2) {
 
     ArrayList<Character> listForReturnString = new ArrayList<>();
 
     for (int i = 0; i < s1.length(); i++) {
       char currentChar = s1.charAt(i);
-      if (!listForReturnString.contains(currentChar)){
+      if (!listForReturnString.contains(currentChar)) {
         listForReturnString.add(currentChar);
       }
     }
 
     for (int i = 0; i < s2.length(); i++) {
       char currentChar = s2.charAt(i);
-      if (!listForReturnString.contains(currentChar)){
+      if (!listForReturnString.contains(currentChar)) {
         listForReturnString.add(currentChar);
       }
     }
@@ -911,12 +886,11 @@ the largest span found in the given array.
 
     StringBuilder stringBuilder = new StringBuilder();
 
-    for (char c: listForReturnString) {
+    for (char c : listForReturnString) {
       stringBuilder.append(c);
     }
 
     return stringBuilder.toString();
-
 
 
   }
@@ -931,8 +905,9 @@ the largest span found in the given array.
 
     StringBuilder exprInStringBuilder = new StringBuilder(expr);
     ArrayList<Double> stack = new ArrayList<>();
+    double counter = 0.0;
 
-    for (int i = 0; i < expr.length(); i++ ) {
+    for (int i = 0; i < expr.length(); i++) {
 
       switch (exprInStringBuilder.charAt(i)) {
         case '1':
@@ -959,39 +934,53 @@ the largest span found in the given array.
         case '8':
           stack.add(8d);
           break;
-        case '2':
-          stack.add(2d);
+        case '9':
+          stack.add(9d);
           break;
-        case '2':
-          stack.add(2d);
+        case '+':
+          counter = stack.get(stack.size() - 1) + stack.get(stack.size() - 2);
+          stack.remove(stack.size() - 1);
+          stack.remove(stack.size() - 2);
+          stack.add(counter);
+          counter = 0;
           break;
-        case '2':
-          stack.add(2d);
+        case '-':
+          counter = stack.get(stack.size() - 1) - stack.get(stack.size() - 2);
+          stack.remove(stack.size() - 1);
+          stack.remove(stack.size() - 2);
+          stack.add(counter);
+          counter = 0;
           break;
-        case '2':
-          stack.add(2d);
+        case 'x':
+          counter = stack.get(stack.size() - 1) * stack.get(stack.size() - 2);
+          stack.remove(stack.size() - 1);
+          stack.remove(stack.size() - 2);
+          stack.add(counter);
+          counter = 0.0;
           break;
-        case '2':
-          stack.add(2d);
+        case '÷':
+          counter = stack.get(stack.size() - 1) / stack.get(stack.size() - 2);
+          stack.remove(stack.size() - 1);
+          stack.remove(stack.size() - 2);
+          stack.add(counter);
+          counter = 0.0;
           break;
-        case '2':
-          stack.add(2d);
+        default:
           break;
-
-
-
-
       }
 
+
     }
+    return stack.get(0);
 
-
-
-    return 0;
   }
 
 
+
 }
+
+
+
 
 
 
