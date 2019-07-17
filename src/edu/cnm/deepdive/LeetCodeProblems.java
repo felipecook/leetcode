@@ -958,7 +958,8 @@ the largest span found in the given array.
         case '/':
           counter = stack.get(stack.size() - 2) / stack.get(stack.size() - 1);
           stack.remove(stack.size() - 1);
-          stack.set(stack.size() - 2, counter);
+          stack.remove(stack.size() - 1);
+          stack.add(counter);
           counter = 0.0;
           break;
         default:
