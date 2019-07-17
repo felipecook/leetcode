@@ -56,7 +56,7 @@ class LeetCodeProblemsTest {
 
   @Test
   void evaluate() {
-    assertEquals(2, leetCodeProblems.evaluate("4 2 /"));
+    assertEquals(3, leetCodeProblems.evaluate("1 3 *"));
 
   }
 }

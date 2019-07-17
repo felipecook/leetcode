@@ -903,6 +903,10 @@ the largest span found in the given array.
 
     // create a stack from which you can push operands onto.
 
+    if (expr.length() == 0) {
+      return 0.0;
+    }
+
     StringBuilder exprInStringBuilder = new StringBuilder(expr);
     ArrayList<Double> stack = new ArrayList<>();
     double counter = 0.0;
@@ -938,21 +942,24 @@ the largest span found in the given array.
           stack.add(9d);
           break;
         case '+':
-          counter = stack.get(stack.size() - 1) + stack.get(stack.size() - 2);
+          counter = stack.get(stack.size() - 2) + stack.get(stack.size() - 1);
           stack.remove(stack.size() - 1);
-          stack.set(stack.size() - 2, counter);
-          counter = 0;
+          stack.remove(stack.size() - 1);
+          stack.add(counter);
+          counter = 0.0;
           break;
         case '-':
           counter = stack.get(stack.size() - 2) - stack.get(stack.size() - 1);
           stack.remove(stack.size() - 1);
-          stack.set(stack.size() - 2, counter);
-          counter = 0;
-          break;
-        case 'x':
-          counter = stack.get(stack.size() - 1) * stack.get(stack.size() - 2);
           stack.remove(stack.size() - 1);
-          stack.set(stack.size() - 2, counter);
+          stack.add(counter);
+          counter = 0.0;
+          break;
+        case '*':
+          counter = stack.get(stack.size() - 2) * stack.get(stack.size() - 1);
+          stack.remove(stack.size() - 1);
+          stack.remove(stack.size() - 1);
+          stack.add(counter);
           counter = 0.0;
           break;
         case '/':
