@@ -901,81 +901,99 @@ the largest span found in the given array.
 
   public double evaluate(String expr) {
 
+    // Having a hard time figuring it out how to make numbers with multiple digits work,
+    // also how to work with decimal numbers.
+
     // create a stack from which you can push operands onto.
 
     if (expr.length() == 0) {
       return 0.0;
     }
 
-    StringBuilder exprInStringBuilder = new StringBuilder(expr);
+    // StringBuilder exprInStringBuilder = new StringBuilder(expr);
     ArrayList<Double> stack = new ArrayList<>();
     double counter = 0.0;
 
-    for (int i = 0; i < expr.length(); i++) {
+//    for (int i = 0; i < expr.length(); i++) {
+//
+//      switch (exprInStringBuilder.charAt(i)) {
+//        case '1':
+//          stack.add(1d);
+//          break;
+//        case '2':
+//          stack.add(2d);
+//          break;
+//        case '3':
+//          stack.add(3d);
+//          break;
+//        case '4':
+//          stack.add(4d);
+//          break;
+//        case '5':
+//          stack.add(5d);
+//          break;
+//        case '6':
+//          stack.add(6d);
+//          break;
+//        case '7':
+//          stack.add(7d);
+//          break;
+//        case '8':
+//          stack.add(8d);
+//          break;
+//        case '9':
+//          stack.add(9d);
+//          break;
+//        case '+':
+//          counter = stack.get(stack.size() - 2) + stack.get(stack.size() - 1);
+//          stack.remove(stack.size() - 1);
+//          stack.remove(stack.size() - 1);
+//          stack.add(counter);
+//          counter = 0.0;
+//          break;
+//        case '-':
+//          counter = stack.get(stack.size() - 2) - stack.get(stack.size() - 1);
+//          stack.remove(stack.size() - 1);
+//          stack.remove(stack.size() - 1);
+//          stack.add(counter);
+//          counter = 0.0;
+//          break;
+//        case '*':
+//          counter = stack.get(stack.size() - 2) * stack.get(stack.size() - 1);
+//          stack.remove(stack.size() - 1);
+//          stack.remove(stack.size() - 1);
+//          stack.add(counter);
+//          counter = 0.0;
+//          break;
+//        case '/':
+//          counter = stack.get(stack.size() - 2) / stack.get(stack.size() - 1);
+//          stack.remove(stack.size() - 1);
+//          stack.remove(stack.size() - 1);
+//          stack.add(counter);
+//          counter = 0.0;
+//          break;
+//        default:
+//          break;
+//      }
+//
+//
+//    }
+//    return stack.get(0);
 
-      switch (exprInStringBuilder.charAt(i)) {
-        case '1':
-          stack.add(1d);
-          break;
-        case '2':
-          stack.add(2d);
-          break;
-        case '3':
-          stack.add(3d);
-          break;
-        case '4':
-          stack.add(4d);
-          break;
-        case '5':
-          stack.add(5d);
-          break;
-        case '6':
-          stack.add(6d);
-          break;
-        case '7':
-          stack.add(7d);
-          break;
-        case '8':
-          stack.add(8d);
-          break;
-        case '9':
-          stack.add(9d);
-          break;
-        case '+':
-          counter = stack.get(stack.size() - 2) + stack.get(stack.size() - 1);
-          stack.remove(stack.size() - 1);
-          stack.remove(stack.size() - 1);
-          stack.add(counter);
-          counter = 0.0;
-          break;
-        case '-':
-          counter = stack.get(stack.size() - 2) - stack.get(stack.size() - 1);
-          stack.remove(stack.size() - 1);
-          stack.remove(stack.size() - 1);
-          stack.add(counter);
-          counter = 0.0;
-          break;
-        case '*':
-          counter = stack.get(stack.size() - 2) * stack.get(stack.size() - 1);
-          stack.remove(stack.size() - 1);
-          stack.remove(stack.size() - 1);
-          stack.add(counter);
-          counter = 0.0;
-          break;
-        case '/':
-          counter = stack.get(stack.size() - 2) / stack.get(stack.size() - 1);
-          stack.remove(stack.size() - 1);
-          stack.remove(stack.size() - 1);
-          stack.add(counter);
-          counter = 0.0;
-          break;
-        default:
-          break;
+    for (int i = 0; i < expr.length(); i++) {
+      char testChar = expr.charAt(i);
+      StringBuilder testString = new StringBuilder();
+
+      if (testChar == ' ') {
+        String converterString = testString.toString();
+        stack.add(Double.parseDouble(converterString));
       }
 
+      testString.append(testChar);
 
     }
-    return stack.get(0);
+
+    return 0.0;
 
   }
 
