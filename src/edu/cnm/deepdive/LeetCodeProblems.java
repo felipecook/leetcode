@@ -920,7 +920,67 @@ the largest span found in the given array.
 
       if (expr.charAt(i) == ' ') {
 
-        if 
+        char firstCharOfSmallerPortionOfString = smallerPortionOfString.charAt(0);
+        switch (firstCharOfSmallerPortionOfString) {
+          case '1':
+            stack.add(Double.parseDouble(smallerPortionOfString));
+            break;
+          case '2':
+            stack.add(Double.parseDouble(smallerPortionOfString));
+            break;
+          case '3':
+            stack.add(Double.parseDouble(smallerPortionOfString));
+            break;
+          case '4':
+            stack.add(Double.parseDouble(smallerPortionOfString));
+            break;
+          case '5':
+            stack.add(Double.parseDouble(smallerPortionOfString));
+            break;
+          case '6':
+            stack.add(Double.parseDouble(smallerPortionOfString));
+            break;
+          case '7':
+            stack.add(Double.parseDouble(smallerPortionOfString));
+            break;
+          case '8':
+            stack.add(Double.parseDouble(smallerPortionOfString));
+            break;
+          case '9':
+            stack.add(Double.parseDouble(smallerPortionOfString));
+            break;
+          case '+':
+            counter = stack.get(stack.size() - 2) + stack.get(stack.size() - 1);
+            stack.remove(stack.size() - 1);
+            stack.remove(stack.size() - 1);
+            stack.add(counter);
+            counter = 0.0;
+            break;
+          case '-':
+            counter = stack.get(stack.size() - 2) - stack.get(stack.size() - 1);
+            stack.remove(stack.size() - 1);
+            stack.remove(stack.size() - 1);
+            stack.add(counter);
+            counter = 0.0;
+            break;
+          case '*':
+            counter = stack.get(stack.size() - 2) * stack.get(stack.size() - 1);
+            stack.remove(stack.size() - 1);
+            stack.remove(stack.size() - 1);
+            stack.add(counter);
+            counter = 0.0;
+            break;
+          case '/':
+            counter = stack.get(stack.size() - 2) / stack.get(stack.size() - 1);
+            stack.remove(stack.size() - 1);
+            stack.remove(stack.size() - 1);
+            stack.add(counter);
+            counter = 0.0;
+            break;
+          default:
+            break;
+        }
+
 
       }
 
@@ -1005,12 +1065,9 @@ the largest span found in the given array.
 //
 //    }
 
-
-
     return 0.0;
 
   }
-
 
 
 }
