@@ -900,10 +900,8 @@ the largest span found in the given array.
    */
 
   public double evaluate(String expr) {
-
     // Having a hard time figuring it out how to make numbers with multiple digits work,
     // also how to work with decimal numbers.
-
     // create a stack from which you can push operands onto.
 
     if (expr.length() == 0) {
@@ -913,6 +911,20 @@ the largest span found in the given array.
     // StringBuilder exprInStringBuilder = new StringBuilder(expr);
     ArrayList<Double> stack = new ArrayList<>();
     double counter = 0.0;
+
+    for (int i = 0; i < expr.length(); i++) {
+
+      // take a smaller portion of the string up to the space.
+
+      String smallerPortionOfString = expr.substring(0, i);
+
+      if (expr.charAt(i) == ' ') {
+
+        if 
+
+      }
+
+    }
 
 //    for (int i = 0; i < expr.length(); i++) {
 //
@@ -980,18 +992,20 @@ the largest span found in the given array.
 //    }
 //    return stack.get(0);
 
-    for (int i = 0; i < expr.length(); i++) {
-      char testChar = expr.charAt(i);
-      StringBuilder testString = new StringBuilder();
+//    for (int i = 0; i < expr.length(); i++) {
+//      char testChar = expr.charAt(i);
+//      StringBuilder testString = new StringBuilder();
+//
+//      if (testChar == ' ') {
+//        String converterString = testString.toString();
+//        stack.add(Double.parseDouble(converterString));
+//      }
+//
+//      testString.append(testChar);
+//
+//    }
 
-      if (testChar == ' ') {
-        String converterString = testString.toString();
-        stack.add(Double.parseDouble(converterString));
-      }
 
-      testString.append(testChar);
-
-    }
 
     return 0.0;
 
