@@ -1079,18 +1079,25 @@ the largest span found in the given array.
    */
   public int[] tenRun(int[] nums) {
 
-    int counter = 10;
+    int currentNumberDivBy10 = 10;
 
-    boolean numberIsDivisbleBy10 = true;
+    boolean numberIsDivisbleBy10 = false;
 
     for (int i = 0; i < nums.length; i++) {
 
       if (nums[i] % 10 == 0) {
+        numberIsDivisbleBy10 = true;
+        currentNumberDivBy10 = nums[i];
+      }
 
+      if (numberIsDivisbleBy10) {
+        nums[i] = currentNumberDivBy10;
       }
 
 
     }
+
+    return nums;
 
   }
 
