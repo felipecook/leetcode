@@ -914,75 +914,78 @@ the largest span found in the given array.
 
     for (int i = 0; i < expr.length(); i++) {
 
+      for (int j = 0; j < i; j++) {
+
+        String smallerPortionOfString = expr.substring(0, i);
+
+        if (expr.charAt(i) == ' ') {
+
+          char firstCharOfSmallerPortionOfString = smallerPortionOfString.charAt(0);
+          switch (firstCharOfSmallerPortionOfString) {
+            case '1':
+              stack.add(Double.parseDouble(smallerPortionOfString));
+              break;
+            case '2':
+              stack.add(Double.parseDouble(smallerPortionOfString));
+              break;
+            case '3':
+              stack.add(Double.parseDouble(smallerPortionOfString));
+              break;
+            case '4':
+              stack.add(Double.parseDouble(smallerPortionOfString));
+              break;
+            case '5':
+              stack.add(Double.parseDouble(smallerPortionOfString));
+              break;
+            case '6':
+              stack.add(Double.parseDouble(smallerPortionOfString));
+              break;
+            case '7':
+              stack.add(Double.parseDouble(smallerPortionOfString));
+              break;
+            case '8':
+              stack.add(Double.parseDouble(smallerPortionOfString));
+              break;
+            case '9':
+              stack.add(Double.parseDouble(smallerPortionOfString));
+              break;
+            case '+':
+              counter = stack.get(stack.size() - 2) + stack.get(stack.size() - 1);
+              stack.remove(stack.size() - 1);
+              stack.remove(stack.size() - 1);
+              stack.add(counter);
+              counter = 0.0;
+              break;
+            case '-':
+              counter = stack.get(stack.size() - 2) - stack.get(stack.size() - 1);
+              stack.remove(stack.size() - 1);
+              stack.remove(stack.size() - 1);
+              stack.add(counter);
+              counter = 0.0;
+              break;
+            case '*':
+              counter = stack.get(stack.size() - 2) * stack.get(stack.size() - 1);
+              stack.remove(stack.size() - 1);
+              stack.remove(stack.size() - 1);
+              stack.add(counter);
+              counter = 0.0;
+              break;
+            case '/':
+              counter = stack.get(stack.size() - 2) / stack.get(stack.size() - 1);
+              stack.remove(stack.size() - 1);
+              stack.remove(stack.size() - 1);
+              stack.add(counter);
+              counter = 0.0;
+              break;
+            default:
+              break;
+          }
+
+
+        }
+      }
       // take a smaller portion of the string up to the space.
 
-      String smallerPortionOfString = expr.substring(0, i);
-
-      if (expr.charAt(i) == ' ') {
-
-        char firstCharOfSmallerPortionOfString = smallerPortionOfString.charAt(0);
-        switch (firstCharOfSmallerPortionOfString) {
-          case '1':
-            stack.add(Double.parseDouble(smallerPortionOfString));
-            break;
-          case '2':
-            stack.add(Double.parseDouble(smallerPortionOfString));
-            break;
-          case '3':
-            stack.add(Double.parseDouble(smallerPortionOfString));
-            break;
-          case '4':
-            stack.add(Double.parseDouble(smallerPortionOfString));
-            break;
-          case '5':
-            stack.add(Double.parseDouble(smallerPortionOfString));
-            break;
-          case '6':
-            stack.add(Double.parseDouble(smallerPortionOfString));
-            break;
-          case '7':
-            stack.add(Double.parseDouble(smallerPortionOfString));
-            break;
-          case '8':
-            stack.add(Double.parseDouble(smallerPortionOfString));
-            break;
-          case '9':
-            stack.add(Double.parseDouble(smallerPortionOfString));
-            break;
-          case '+':
-            counter = stack.get(stack.size() - 2) + stack.get(stack.size() - 1);
-            stack.remove(stack.size() - 1);
-            stack.remove(stack.size() - 1);
-            stack.add(counter);
-            counter = 0.0;
-            break;
-          case '-':
-            counter = stack.get(stack.size() - 2) - stack.get(stack.size() - 1);
-            stack.remove(stack.size() - 1);
-            stack.remove(stack.size() - 1);
-            stack.add(counter);
-            counter = 0.0;
-            break;
-          case '*':
-            counter = stack.get(stack.size() - 2) * stack.get(stack.size() - 1);
-            stack.remove(stack.size() - 1);
-            stack.remove(stack.size() - 1);
-            stack.add(counter);
-            counter = 0.0;
-            break;
-          case '/':
-            counter = stack.get(stack.size() - 2) / stack.get(stack.size() - 1);
-            stack.remove(stack.size() - 1);
-            stack.remove(stack.size() - 1);
-            stack.add(counter);
-            counter = 0.0;
-            break;
-          default:
-            break;
-        }
-
-
-      }
 
     }
 
