@@ -1122,6 +1122,7 @@ the elements from the original array that come before the first
     for (int i = 0; i < nums.length; i++) {
       if (nums[i] == 4) {
         counter = i;
+        break;
       }
     }
 
