@@ -1109,9 +1109,31 @@ the elements from the original array that come before the first
 
   public int[] pre4(int[] nums) {
 
+    if (nums.length == 1) {
+      if (nums[0] == 4) {
+          int[] ints = new int[0];
+          return ints;
+      }
+    }
+
+    int counter = 0;
+
+    // use for loop to find place in array where 4 exists.
+    for (int i = 0; i < nums.length; i++) {
+      if (nums[i] == 4) {
+        counter = i;
+      }
+    }
+
+    int[] returnInts = new int[counter];
+
+    for (int i = 0; i < counter; i++) {
+      returnInts[i] = nums[i];
+    }
+
+    return returnInts;
 
 
-    
   }
 
 
