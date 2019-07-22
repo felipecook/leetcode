@@ -1106,7 +1106,6 @@ Given a non-empty array of ints, return a new array containing
 the elements from the original array that come before the first
 4 in the original array.
    */
-
   public int[] pre4(int[] nums) {
 
     if (nums.length == 1) {
@@ -1136,6 +1135,15 @@ the elements from the original array that come before the first
 
 
   }
+
+  /*
+  Given an array of ints, return true if every 2 that appears in the array is next to another 2.
+   */
+  public boolean twoTwo(int[] nums) {
+
+  }
+
+
 
 
 
