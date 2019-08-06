@@ -898,7 +898,6 @@ the largest span found in the given array.
   /*
   creates a calculator which evaluates expressions in Reverse Polish notation.
    */
-
   public double evaluate(String expr) {
     // Having a hard time figuring it out how to make numbers with multiple digits work,
     // also how to work with decimal numbers.
@@ -1141,6 +1140,26 @@ the elements from the original array that come before the first
    */
   public boolean twoTwo(int[] nums) {
 
+    boolean flag = false;
+
+    for (int i = 0; i < nums.length - 1; i++) {
+      int counter1 = nums[i];
+
+      if (counter1 == 2 && nums[i + 1] == 2) {
+        flag = true;
+      }
+
+    }
+  }
+
+  /*
+  Given a string, return a string where every appearance of the lowercase word
+  "is" has been replaced with "is not". The word "is" should not be immediately
+  preceeded or followed by a letter -- so for example the "is" in "this" does not count.
+   */
+  public String notReplace(String str) {
+
+    
   }
 
 
