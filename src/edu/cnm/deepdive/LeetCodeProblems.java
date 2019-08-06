@@ -1150,6 +1150,9 @@ the elements from the original array that come before the first
       }
 
     }
+
+    // Remove when solving
+    return false;
   }
 
   /*
@@ -1159,7 +1162,7 @@ the elements from the original array that come before the first
    */
   public String notReplace(String str) {
 
-    
+
   }
 
 
