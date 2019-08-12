@@ -1140,6 +1140,10 @@ the elements from the original array that come before the first
    */
   public boolean twoTwo(int[] nums) {
 
+    if (nums.length == 0 || nums.length == 1 && nums[0] != 2) {
+      return false;
+    }
+
     boolean flag = false;
 
     for (int i = 0; i < nums.length - 1; i++) {
@@ -1152,7 +1156,7 @@ the elements from the original array that come before the first
     }
 
     // Remove when solving
-    return false;
+    return flag;
   }
 
   /*
@@ -1162,6 +1166,9 @@ the elements from the original array that come before the first
    */
   public String notReplace(String str) {
 
+    for (int i = 0; i < str.length() - 1; i++) {
+
+    }
 
   }
 
