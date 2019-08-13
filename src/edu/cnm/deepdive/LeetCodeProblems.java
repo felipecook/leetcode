@@ -1140,23 +1140,46 @@ the elements from the original array that come before the first
    */
   public boolean twoTwo(int[] nums) {
 
-    if (nums.length == 0 || nums.length == 1 && nums[0] != 2) {
+    if (nums.length == 0) {
+      return true;
+    }
+    if (nums.length == 1 && nums[0] != 2) {
+      return true;
+    }
+    if (nums.length == 1 && nums[0] == 2) {
       return false;
     }
 
-    boolean flag = false;
+    boolean checkFor2Flag = false;
+    boolean returnFlag = false;
 
-    for (int i = 0; i < nums.length - 1; i++) {
+    for (int i = 1; i < nums.length; i++) {
       int counter1 = nums[i];
 
-      if (counter1 == 2 && nums[i + 1] == 2) {
-        flag = true;
+      if (counter1 == 2 && nums[i - 1] == 2) {
+        returnFlag = true;
+      }
+      if (counter1 == 2 && nums[i - 1] != 2) {
+        returnFlag = false;
+      }
+      if (counter1 == 2) {
+        checkFor2Flag = true;
       }
 
     }
 
-    // Remove when solving
-    return flag;
+    if (!checkFor2Flag) {
+      returnFlag = true;
+    }
+
+    if (nums[nums.length - 1] == 2 && nums[nums.length - 2] != 2) {
+      return false;
+    }
+    if (nums[nums.length - 2] == 2 && nums[nums.length - 1] != 2) {
+      return false;
+    }
+
+    return returnFlag;
   }
 
   /*
@@ -1170,6 +1193,7 @@ the elements from the original array that come before the first
 
     }
 
+    return str;
   }
 
 
