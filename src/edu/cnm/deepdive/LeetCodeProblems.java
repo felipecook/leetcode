@@ -1189,14 +1189,24 @@ the elements from the original array that come before the first
    */
   public String notReplace(String str) {
 
+    StringBuilder returnString = new StringBuilder();
+    String isNotAddition = " not";
+
+
     //Use a for loop to iterate through the elements in String str up to but
     // not including the last element.
 
-    for (int i = 0; i < str.length() - 2; i++) {
-      // grabs a substring of length two, from the String str.
-      String substringLookingForIS = str.substring(i, i + 2);
+    for (int i = 0; i < str.length() - 3; i++) {
+      // grabs a substring of length three, from the String str looking for " is".
+      String substringLookingForIS = str.substring(i, i + 3);
 
       
+
+      if (substringLookingForIS.equals(" is")) {
+
+      }
+
+
 
     }
 
