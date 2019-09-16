@@ -57,6 +57,10 @@ class LeetCodeProblemsTest {
   @Test
   void evaluate() {
     assertEquals(3, leetCodeProblems.evaluate("1 3 *"));
+  }
 
+  @Test
+  void notReplace() {
+    assertEquals("This is not isabell", leetCodeProblems.notReplace("This is isabell"));
   }
 }

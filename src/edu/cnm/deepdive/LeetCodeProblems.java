@@ -985,7 +985,6 @@ the largest span found in the given array.
       }
       // take a smaller portion of the string up to the space.
 
-
     }
 
 //    for (int i = 0; i < expr.length(); i++) {
@@ -1109,8 +1108,8 @@ the elements from the original array that come before the first
 
     if (nums.length == 1) {
       if (nums[0] == 4) {
-          int[] ints = new int[0];
-          return ints;
+        int[] ints = new int[0];
+        return ints;
       }
     }
 
@@ -1192,7 +1191,6 @@ the elements from the original array that come before the first
     StringBuilder returnString = new StringBuilder();
     String isNotAddition = "s not";
 
-
     //Use a for loop to iterate through the elements in String str up to but
     // not including the last element.
 
@@ -1200,7 +1198,8 @@ the elements from the original array that come before the first
 
       returnString.append(str.charAt(i));
 
-      if (str.charAt(i) == 'i' && str.charAt(i - 1) == ' ' && str.charAt(i + 1) == 's') {
+      if (str.charAt(i) == 'i' && str.charAt(i - 1) == ' '
+          && str.charAt(i + 1) == 's' && str.charAt(i + 2) == ' ') {
         returnString.append(isNotAddition);
         i++;
       }
@@ -1210,9 +1209,20 @@ the elements from the original array that come before the first
     return returnString.toString();
   }
 
+  /*
+  In a 2 dimensional array grid, each value grid[i][j] represents the height of a building located there. We are allowed to increase the height of any number of buildings, by any amount (the amounts can be different for different buildings). Height 0 is considered to be a building as well.
+At the end, the "skyline" when viewed from all four directions of the grid, i.e. top, bottom, left, and right, must be the same as the skyline of the original grid. A city's skyline is the outer contour of the rectangles formed by all the buildings when viewed from a distance. See the following example.
+What is the maximum total sum that the height of the buildings can be increased?
+   */
+  public int maxIncreaseKeepingSkyline(int[][] grid) {
 
+    int counter = 0;
 
+    // first go through each row finding the biggest numbers in each one.
+    // second go through each column finding the biggest numbers in each one.
 
+    return counter;
+  }
 
 
 }
