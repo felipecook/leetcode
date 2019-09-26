@@ -1227,12 +1227,21 @@ What is the maximum total sum that the height of the buildings can be increased?
   /*
   Given a sting, compute recursively a new string where identical chars that are adjacent in the original string are separated from each other by a “*”.
    */
-  public String pairStar(String str) {
-    if (str.length() == 1) {
-      return str;
+  static String output = "";
+
+  public static String pairStar(String str, int position) {
+
+
+    output = output + str.charAt(position);
+
+    if (position == str.length() - 1)
+      return;
+    
+    if (str.charAt(position) == str.charAt(position + 1)) {
+      output += '*';
     }
-    else
-      return str;
+
+    pairStar(str, position + 1);
   }
 
 
