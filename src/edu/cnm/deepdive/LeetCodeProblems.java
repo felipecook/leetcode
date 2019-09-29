@@ -2,6 +2,7 @@ package edu.cnm.deepdive;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 
 public class LeetCodeProblems {
 
@@ -1227,21 +1228,36 @@ What is the maximum total sum that the height of the buildings can be increased?
   /*
   Given a sting, compute recursively a new string where identical chars that are adjacent in the original string are separated from each other by a “*”.
    */
-  static String output = "";
+  String output = "";
 
-  public static String pairStar(String str, int position) {
-
+  public String pairStar(String str, int position) {
 
     output = output + str.charAt(position);
 
-    if (position == str.length() - 1)
-      return;
-    
+    if (position == str.length() - 1) {
+      return output;
+    }
+
     if (str.charAt(position) == str.charAt(position + 1)) {
       output += '*';
     }
 
     pairStar(str, position + 1);
+
+
+  }
+
+  /*
+  Given an n x n array, return the array elements arranged
+  from outermost elements to the middle element, traveling clockwise.
+   */
+  public int[] snail(int[][] array) {
+
+    int  = array.length;
+
+    LinkedList<Integer> returnList = new LinkedList<>();
+
+    for (int i = 0; i < )
   }
 
 

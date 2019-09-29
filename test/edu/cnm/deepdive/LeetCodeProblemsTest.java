@@ -63,4 +63,9 @@ class LeetCodeProblemsTest {
   void notReplace() {
     assertEquals("This is not isabell", leetCodeProblems.notReplace("This is isabell"));
   }
+
+  @Test
+  void pairStar() {
+    assertEquals("ge*ek", leetCodeProblems.pairStar("geek", 0));
+  }
 }
