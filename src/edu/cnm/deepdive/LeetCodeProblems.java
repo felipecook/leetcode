@@ -1253,13 +1253,13 @@ What is the maximum total sum that the height of the buildings can be increased?
    */
   public int[] snail(int[][] array) {
 
-    int counter = 0;
-    int length = array.length;
+    int beginCounter = 0;
+    int endCounter = array.length;
 
     LinkedList<Integer> returnList = new LinkedList<>();
 
-    for (int i = 0; i < length; i++) {
-      returnList.add(array[][]);
+    for (int i = 0; i < endCounter; i++) {
+      returnList.add(array[beginCounter][0]);
     }
   }
 
