@@ -1244,7 +1244,7 @@ What is the maximum total sum that the height of the buildings can be increased?
 
     pairStar(str, position + 1);
 
-
+    return "";
   }
 
   /*
@@ -1263,11 +1263,15 @@ What is the maximum total sum that the height of the buildings can be increased?
       returnList.add(array[beginCounter][0]);
       beginCounter++;
     }
-
+    beginCounter = 0;
     //goes through rightmost elements
     for (int i = 0; i < endCounter; i++) {
-      returnList.add(array[])
+      returnList.add(array[endCounter][beginCounter]);
+      beginCounter++;
     }
+
+    //goes through the bottom elements
+    for
   }
 
 
