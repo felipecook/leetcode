@@ -1258,8 +1258,15 @@ What is the maximum total sum that the height of the buildings can be increased?
 
     LinkedList<Integer> returnList = new LinkedList<>();
 
+    // goes through the top elements and add to list.
     for (int i = 0; i < endCounter; i++) {
       returnList.add(array[beginCounter][0]);
+      beginCounter++;
+    }
+
+    //goes through rightmost elements
+    for (int i = 0; i < endCounter; i++) {
+      returnList.add(array[])
     }
   }
 
