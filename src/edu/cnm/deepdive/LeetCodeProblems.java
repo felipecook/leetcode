@@ -1253,8 +1253,16 @@ What is the maximum total sum that the height of the buildings can be increased?
    */
   public int[] snail(int[][] array) {
 
+    // tells each forloop where to begin at.
     int beginCounter = 0;
+
+    // tells each for loop where to end at.
     int endCounter = array.length;
+
+    //subtract from the end counter and add to at the end of while loop
+    int iterationCounter = 1;
+
+    //TODO add while loop that encompasses the for loops.
 
     LinkedList<Integer> returnList = new LinkedList<>();
 
@@ -1266,12 +1274,24 @@ What is the maximum total sum that the height of the buildings can be increased?
     beginCounter = 0;
     //goes through rightmost elements
     for (int i = 0; i < endCounter; i++) {
-      returnList.add(array[endCounter][beginCounter]);
+      returnList.add(array[endCounter - iterationCounter][beginCounter]);
       beginCounter++;
     }
 
-    //goes through the bottom elements
-    for
+    //goes through the bottom elements from right to left (big to small)
+    for (int i = 0; i < endCounter; i++) {
+      returnList.add(array[endCounter - iterationCounter][beginCounter]);
+      beginCounter--;
+    }
+
+    beginCounter = endCounter;
+    // goes through the leftmost elements from bottom to top
+    for (int i = 0; i < endCounter; i++){
+      returnList.add(array[0][beginCounter]);
+      beginCounter--;
+    }
+
+    int[] returnArray = returnList.toArray(Integer);
   }
 
 
