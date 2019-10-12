@@ -1266,30 +1266,37 @@ What is the maximum total sum that the height of the buildings can be increased?
 
     LinkedList<Integer> returnList = new LinkedList<>();
 
-    // goes through the top elements and add to list.
-    for (int i = 0; i < endCounter; i++) {
-      returnList.add(array[beginCounter][0]);
-      beginCounter++;
-    }
-    beginCounter = 0;
-    //goes through rightmost elements
-    for (int i = 0; i < endCounter; i++) {
-      returnList.add(array[endCounter - iterationCounter][beginCounter]);
-      beginCounter++;
+    boolean endOfIterations = true;
+
+    while(endOfIterations){
+
+      // goes through the top elements and add to list.
+      for (int i = 0; i < endCounter; i++) {
+        returnList.add(array[beginCounter][0]);
+        beginCounter++;
+      }
+      beginCounter = 0;
+      //goes through rightmost elements
+      for (int i = 0; i < endCounter; i++) {
+        returnList.add(array[endCounter - iterationCounter][beginCounter]);
+        beginCounter++;
+      }
+
+      //goes through the bottom elements from right to left (big to small)
+      for (int i = 0; i < endCounter; i++) {
+        returnList.add(array[endCounter - iterationCounter][beginCounter]);
+        beginCounter--;
+      }
+
+      beginCounter = endCounter;
+      // goes through the leftmost elements from bottom to top
+      for (int i = 0; i < endCounter; i++){
+        returnList.add(array[0][beginCounter]);
+        beginCounter--;
+      }
+      
     }
 
-    //goes through the bottom elements from right to left (big to small)
-    for (int i = 0; i < endCounter; i++) {
-      returnList.add(array[endCounter - iterationCounter][beginCounter]);
-      beginCounter--;
-    }
-
-    beginCounter = endCounter;
-    // goes through the leftmost elements from bottom to top
-    for (int i = 0; i < endCounter; i++){
-      returnList.add(array[0][beginCounter]);
-      beginCounter--;
-    }
 
     int[] returnArray = returnList.toArray(Integer);
   }
