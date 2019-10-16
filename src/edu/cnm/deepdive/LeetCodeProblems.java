@@ -1306,6 +1306,11 @@ What is the maximum total sum that the height of the buildings can be increased?
   return a new string where the word is in the middle of the out string, e.g. "<<word>>".
    */
   public String makeOutWord(String out, String word) {
+    StringBuilder returnString = new StringBuilder(out);
+
+    returnString.insert(out.length() / 2, word);
+
+    return returnString.toString();
 
   }
 
