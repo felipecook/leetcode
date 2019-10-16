@@ -1294,11 +1294,19 @@ What is the maximum total sum that the height of the buildings can be increased?
         returnList.add(array[0][beginCounter]);
         beginCounter--;
       }
-      
+
     }
 
 
     int[] returnArray = returnList.toArray(Integer);
+  }
+
+  /*
+  Given an "out" string length 4, such as "<<>>", and a word,
+  return a new string where the word is in the middle of the out string, e.g. "<<word>>".
+   */
+  public String makeOutWord(String out, String word) {
+
   }
 
 
