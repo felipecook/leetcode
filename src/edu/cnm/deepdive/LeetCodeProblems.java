@@ -1321,10 +1321,15 @@ What is the maximum total sum that the height of the buildings can be increased?
   This is a little harder than it looks and can be done without any loops.
    */
   public boolean makeBricks(int small, int big, int goal) {
-    if (small == goal || big + 4 == goal || small + big + 4 == goal) {
+    if (small == goal) {
       return true;
+    } else if (big == 1 && big + 4 == goal) {
+      return true;
+    } else if (big == 1 && small + big + 4 == goal) {
+      return true;
+    } else{
+      return false;
     }
-    return false;
   }
 
 
