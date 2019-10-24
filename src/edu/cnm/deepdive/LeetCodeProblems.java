@@ -1322,15 +1322,7 @@ What is the maximum total sum that the height of the buildings can be increased?
    */
   public boolean makeBricks(int small, int big, int goal) {
 
-    if (small == goal) {
-      return true;
-    } else if (big == 1 && big + 4 == goal) {
-      return true;
-    } else if (big == 1 && small + big + 4 == goal) {
-      return true;
-    } else if (big + big * 4 == goal) {
-      return true;
-    } else if (small + big + big * 4 >= goal){
+    if (small + big + big * 4 >= goal){
       return true;
     } else {
       return false;
