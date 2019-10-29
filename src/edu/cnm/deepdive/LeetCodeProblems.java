@@ -1329,6 +1329,27 @@ What is the maximum total sum that the height of the buildings can be increased?
     }
   }
 
+  /*
+  Test Question 1 for EPIC. Delimiter, taking a string of numbers and an int array of divider positions,
+  first reverse the string and then insert the delimiters.
+   */
+  public static String delimiter(String inputString, int[] dividerPositions) {
+
+    StringBuilder returnString = new StringBuilder();
+
+    // reverse the string.
+    for (int i = inputString.length() - 1; i<= 0; i--) {
+      returnString.append(inputString.charAt(i));
+    }
+
+    for (int i = 0; i < dividerPositions.length; i++) {
+      returnString.insert(dividerPositions[i], '-');
+    }
+
+    return returnString.toString();
+
+  }
+
 
 
 }
