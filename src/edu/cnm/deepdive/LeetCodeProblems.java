@@ -1350,6 +1350,25 @@ What is the maximum total sum that the height of the buildings can be increased?
 
   }
 
+  /*
+  Test Question 2 for EPIC. SelfDividing, takes a start and end integer and checks if integer is
+  divisible by each of its component numerals. If it is divisible, then print out that number to console.
+   */
+  public static void isSelfDividing(int start, int end) {
+    for (int i = start; i <= end; i++) {
+      String iAsString = String.valueOf(i);
+      boolean isNumberDivisible = true;
+      for (int j = 0; j < iAsString.length() - 1; j++) {
+        if (i % iAsString.charAt(j) != 0) {
+          isNumberDivisible = false;
+        }
+      }
+      if (isNumberDivisible){
+        System.out.println(i);
+      }
+    }
+  }
+
 
 
 }
