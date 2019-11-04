@@ -1369,6 +1369,32 @@ What is the maximum total sum that the height of the buildings can be increased?
     }
   }
 
+  /*
+  How do you find the missing number in a given integer array of 1 to 100?
+   */
+
+  public static boolean isNumberMissing() {
+    int[] arrayFrom0to100 = new int[100];
+    boolean flag = true;
+
+    for(int i = 0; i < 101; i++) {
+      arrayFrom0to100[i] = i;
+    }
+
+    for(int i = 0; i < 101; i++) {
+      if (arrayFrom0to100[i] == i) {
+        System.out.println("number " + i + " exists");
+      } else {
+        System.out.println("number " + i + " does not exist");
+        flag = false;
+      }
+    }
+
+    return flag;
+
+  }
+
+
 
 
 }
