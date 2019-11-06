@@ -1372,7 +1372,6 @@ What is the maximum total sum that the height of the buildings can be increased?
   /*
   How do you find the missing number in a given integer array of 1 to 100?
    */
-
   public static boolean isNumberMissing() {
     int[] arrayFrom0to100 = new int[100];
     boolean flag = true;
