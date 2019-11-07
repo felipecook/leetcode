@@ -3,6 +3,7 @@ package edu.cnm.deepdive;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
+import java.util.List;
 
 public class LeetCodeProblems {
 
@@ -1393,6 +1394,20 @@ What is the maximum total sum that the height of the buildings can be increased?
 
   }
 
+  /*
+  The input to the function/method consists of five arguments -
+numCompetitors, an integer representing the number of competitors for the Echo device;
+topNCompetitors, an integer representing the number of top competitors evaluated from the list of competitors that are a good competition to Amazon(N);
+competitors, a list of strings representing the competitors;
+numReviews, an integer representing the number of reviews from different websites that are identified by the automated webcrawler;
+reviews, a list of strings where each element is a string that consists of space- separated words representing user reviews.
+
+Output
+Return a list of strings representing Amazons' top N competitors in order of most frequently mentioned to least frequent
+   */
+  public static List popularCompetitors() {
+    
+  }
 
 
 
