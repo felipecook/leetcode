@@ -1405,8 +1405,27 @@ reviews, a list of strings where each element is a string that consists of space
 Output
 Return a list of strings representing Amazons' top N competitors in order of most frequently mentioned to least frequent
    */
-  public static List popularCompetitors() {
-    
+  public static List popularCompetitors(int numCompetitors, int topNCompetitors,
+      String[] competitors, int numReviews) {
+    String[] reviews = {"newshop is providing good services in the city, everyone should use newshop",
+        "best services by newshop", "fashionbeats has great services in the city",
+        "I am proud to have fashionbeats","mymarket has awesome services",
+        "Thanks Newshop for the quick delivery."};
+
+    return -1;
+  }
+
+
+  /*
+    Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+   */
+
+  public int[] twoSum(int[] nums, int target) {
+
+    for (int i = 0; i < nums.length; i++) {
+      
+    }
+
   }
 
 
