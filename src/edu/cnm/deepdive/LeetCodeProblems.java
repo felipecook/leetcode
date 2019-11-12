@@ -1412,7 +1412,7 @@ Return a list of strings representing Amazons' top N competitors in order of mos
         "I am proud to have fashionbeats","mymarket has awesome services",
         "Thanks Newshop for the quick delivery."};
 
-    return -1;
+    return null;
   }
 
 
@@ -1423,7 +1423,11 @@ Return a list of strings representing Amazons' top N competitors in order of mos
   public int[] twoSum(int[] nums, int target) {
 
     for (int i = 0; i < nums.length; i++) {
-      
+      int baseNumber = nums[i];
+      int indice = nums[i];
+      for (int j = 0; j < nums.length; j++) {
+        
+      }
     }
 
   }
