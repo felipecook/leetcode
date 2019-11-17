@@ -1422,11 +1422,18 @@ Return a list of strings representing Amazons' top N competitors in order of mos
 
   public int[] twoSum(int[] nums, int target) {
 
+    int[] returnArray = new int[2];
+
+    //Grab one number from int array
     for (int i = 0; i < nums.length; i++) {
       int baseNumber = nums[i];
-      int indice = nums[i];
+
+      //add that number to each of the other numbers in int array, if it adds to target
+      // then add those indices to the return array
       for (int j = 0; j < nums.length; j++) {
-        
+        if (baseNumber + nums[j] == target) {
+          
+        }
       }
     }
 
