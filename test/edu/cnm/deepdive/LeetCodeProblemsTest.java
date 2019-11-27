@@ -68,4 +68,9 @@ class LeetCodeProblemsTest {
   void pairStar() {
     assertEquals("ge*ek", leetCodeProblems.pairStar("geek", 0));
   }
+
+  @Test
+  void bunnyEars() {
+    assertEquals(6, leetCodeProblems.bunnyEars(3));
+  }
 }
