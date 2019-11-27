@@ -1298,8 +1298,10 @@ What is the maximum total sum that the height of the buildings can be increased?
 
     }
 
+    //TODO Fix this return, and untangle this method
+ //   int[] returnArray = returnList.toArray(Integer);
 
-    int[] returnArray = returnList.toArray(Integer);
+    return null;
   }
 
   /*
@@ -1447,7 +1449,10 @@ Return a list of strings representing Amazons' top N competitors in order of mos
   number of ears across all the bunnies recursively (without loops or multiplication).
    */
   public int bunnyEars(int bunnies) {
-    
+    if(bunnies == 0) {
+      return 0;
+    }
+    return 2 + (bunnyEars(bunnies - 1));
   }
 
 
