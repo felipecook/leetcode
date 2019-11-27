@@ -1431,11 +1431,14 @@ Return a list of strings representing Amazons' top N competitors in order of mos
       //add that number to each of the other numbers in int array, if it adds to target
       // then add those indices to the return array
       for (int j = 0; j < nums.length; j++) {
-        if (baseNumber + nums[j] == target) {
-          
+        if (baseNumber + nums[j] == target && i != j) {
+          returnArray[0] = i;
+          returnArray[1] = j;
         }
       }
     }
+
+    return returnArray;
 
   }
 
