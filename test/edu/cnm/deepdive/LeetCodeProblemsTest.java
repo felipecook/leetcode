@@ -69,6 +69,14 @@ class LeetCodeProblemsTest {
     assertEquals("ge*ek", leetCodeProblems.pairStar("geek", 0));
   }
 
+  int[] inputArray = {0, 3, 2, 3};
+  int[] returnArray = {1,3};
+
+  @Test
+  void twoSum() {
+    assertEquals(returnArray, leetCodeProblems.twoSum(inputArray, 6));
+  }
+
   @Test
   void bunnyEars() {
     assertEquals(6, leetCodeProblems.bunnyEars(3));

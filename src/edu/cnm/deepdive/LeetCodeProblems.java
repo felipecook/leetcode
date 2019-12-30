@@ -1419,7 +1419,8 @@ Return a list of strings representing Amazons' top N competitors in order of mos
 
 
   /*
-    Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+    Given an array of integers, return indices of the two numbers such that they add up to a specific
+    target.
    */
 
   public int[] twoSum(int[] nums, int target) {
@@ -1436,6 +1437,7 @@ Return a list of strings representing Amazons' top N competitors in order of mos
         if (baseNumber + nums[j] == target && i != j) {
           returnArray[0] = i;
           returnArray[1] = j;
+          return returnArray;
         }
       }
     }
@@ -1455,7 +1457,9 @@ Return a list of strings representing Amazons' top N competitors in order of mos
     return 2 + (bunnyEars(bunnies - 1));
   }
 
-
+  public String defangIPaddr(String address) {
+    
+  }
 
 
 }
