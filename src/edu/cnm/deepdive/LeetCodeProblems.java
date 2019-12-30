@@ -1457,8 +1457,9 @@ Return a list of strings representing Amazons' top N competitors in order of mos
     return 2 + (bunnyEars(bunnies - 1));
   }
 
+  /* A defanged IP address replaces every period "." with "[.]". */
   public String defangIPaddr(String address) {
-    
+    return address.replace(".", "[.]");
   }
 
 
