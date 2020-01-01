@@ -1462,6 +1462,13 @@ Return a list of strings representing Amazons' top N competitors in order of mos
     return address.replace(".", "[.]");
   }
 
+/*
+  Given an array nums of integers, return how many of them contain an even number of digits.
+*/
+  public int findNumbers(int[] nums) {
+    
+  }
+
 
 }
 
