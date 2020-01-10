@@ -1466,7 +1466,17 @@ Return a list of strings representing Amazons' top N competitors in order of mos
   Given an array nums of integers, return how many of them contain an even number of digits.
 */
   public int findNumbers(int[] nums) {
-    
+    int counter = 0;
+    for (int i = 0; i < nums.length; i++) {
+      if (nums[i] > 9 && nums[i] < 100){
+        counter++;
+      } else if (nums[i] > 999 && nums[i] < 10000) {
+        counter++;
+      }
+    }
+    return counter;
+
+    // THIS IS CURRENTLY A HARDCODED SOLUTION AND NEEDS TO BE UPDATED WITH A DYNAMIC SOLUTION
   }
 
 
