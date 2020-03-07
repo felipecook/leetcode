@@ -1483,6 +1483,19 @@ Return a list of strings representing Amazons' top N competitors in order of mos
   that the sum of the numbers on one side is equal to the sum of the numbers on the other side.*/
   public boolean canBalance(int[] nums) {
     boolean flag = false;
+    int sum = 0;
+    for (int i = 0; i < nums.length; i++) {
+      sum += nums[i];
+      int backwardsSum =0;
+      for (int j = nums.length - 1; j > 0; j--) {
+        backwardsSum += nums[j];
+      }
+      if(backwardsSum == sum) {
+        flag = true;
+      }
+    }
+
+    return flag;
 
   }
 
